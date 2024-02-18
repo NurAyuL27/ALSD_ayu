@@ -14,17 +14,15 @@
   Gambar 4: Output Perulangan kondisi kedua
 
 ### 1.3 Praktikum Array
-- ![Screenshot 2024-02-18 225152](https://drive.google.com/file/d/17aMgeb_tV-k2dbO_-WztQBidLVrx0Y5c/view?usp=drive_link)
-  Gambar 5: Output Array kondisi pertama
-- ![Screenshot 2024-02-18 225805](https://drive.google.com/file/d/1bYbGtzdYGPhB-h8PcvySp9Ve48KluBCc/view?usp=drive_link)
-  Gambar 6: Output Array kondisi kedua
+- ![Screenshot 2024-02-18 225152](https://drive.google.com/file/d/1mX2A0Qfz7jYx7iy4pNZWykE3s3lIM0jR/view?usp=drive_link)
+  Gambar 5: Output Array 
 
 ### 1.4 Praktikum Fungsi
 - ![Screenshot 2024-02-18 225805](https://drive.google.com/file/d/1bYbGtzdYGPhB-h8PcvySp9Ve48KluBCc/view?usp=drive_link)
   Gambar 7: Output Fungsi
 
 ### 2.1 Tugas Array
-- ![Screenshot 2024-02-18 230103](https://drive.google.com/file/d/1bYbGtzdYGPhB-h8PcvySp9Ve48KluBCc/view?usp=drive_link)
+- ![Screenshot 2024-02-18 230103](https://drive.google.com/file/d/1XIeYhYgTJcgqCyYQ5SRvZq_ysTZ4FMb0/view?usp=drive_link)
   Gambar 8: Output ArrayPlat kondisi pertama
 - ![Screenshot 2024-02-18 230120](https://drive.google.com/file/d/1zMQ3jis4epY4sE3gDNs2IHHIE1ZWzUtM/view?usp=drive_link)
   Gambar 9: Output ArrayPlat kondisi kedua
