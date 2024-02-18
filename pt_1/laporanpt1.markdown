@@ -3,10 +3,11 @@
 
 ### 1.1 Praktikum Pemilihan
 
-  Gambar 1: Output Pemilihan kondisi pertama
 ![alt text](<Screenshot 2024-02-18 214057.png>)
-  Gambar 2: Output Pemilihan kondisi kedua
+  Gambar 1: Output Pemilihan kondisi pertama
 ![alt text](<Screenshot 2024-02-18 214131.png>)
+  Gambar 2: Output Pemilihan kondisi kedua
+  
 ### 1.2 Praktikum Perulangan
 ![alt text](<Screenshot 2024-02-18 224628.png>)
   Gambar3: Output Perulangan kondisi pertama
