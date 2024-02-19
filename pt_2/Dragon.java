@@ -26,6 +26,26 @@ public class Dragon {
     }
 
     void moveUp() {
-        if (y < 0)
+        if (y > 0) {
+            y--;
+        } else {
+            detectCollision();
+        }
+    }
+
+    void moveDown() {
+        if (y < height) {
+            y++;
+        } else {
+            detectCollision();
+        }
+    }
+
+    void printPosition() {
+        System.out.println("Position: (" + x + ", " + y + ")");
+    }
+
+    void detectCollision() {
+        System.out.println("Game Over");
     }
 }

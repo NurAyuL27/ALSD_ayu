@@ -1,6 +1,7 @@
 ### <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 4
 
  
+![alt text](<logo polinema.png>)
 
 
 Nama : 
