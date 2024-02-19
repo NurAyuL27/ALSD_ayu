@@ -1,38 +1,57 @@
-### <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 4
+## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 4
 
- 
-![alt text](<logo polinema.png>)
+<p align="center"> 
+<img src="logo polinema.png" width="300px">
 
 
-Nama : 
-Kelas : 
-NIM : 
+ <p align="center">  Nama : 
+ <p align="center">  Kelas :
+ <p align="center">  NIM : 
 
-Jln.Soekarno Hatta No.9, Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 6
-Phone: (0341) 404424,404425
-E-mail: Polinema.ac.id <center>
+<center> Jln.Soekarno Hatta No.9, Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 6
+<center>Phone: (0341) 404424,404425
+<center>E-mail: Polinema.ac.id
 
-# JOBSHEET II
-## OBJECT
+### JOBSHEET II
+### OBJECT
 
-### Percobaan 1: Deklarasi Class, Atribut dan Metho
+#### 2.1 Percobaan 1: Deklarasi Class, Atribut dan Metho
 
--
+- Hasil Program
+- Hasil Running
+- Pertanyaan
 
-### Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+#### 2.2 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 
-- Menyelesaikan analisis data untuk proyek X.
-- Membuat draft proposal untuk klien Y.
-- Meninjau dan memberikan umpan balik pada desain UI aplikasi.
+- Hasil Program
+- Hasil Running
+- Pertanyaan
 
-### Percobaan 3: Membuat Konstruktor
+#### 2.3 Percobaan 3: Membuat Konstruktor
 
-- Menyelesaikan pemrograman backend untuk proyek X.
-- Memperbarui laporan keuangan bulanan.
-- Memulai penelitian untuk proyek baru.
+- Hasil Program
+- Hasil Running
+- Pertanyaan
 
-### 2.4 Latihan Praktikum
+#### 2.4 Latihan Praktikum
 
-- Dibutuhkan koordinasi lebih lanjut dengan tim pemasaran terkait kampanye baru.
-- Pertemuan dengan klien dijadwalkan ulang untuk minggu depan.
+#### 2.4.1 Menambahkan Metode
+
+- Hasil Program
+- Hasil Running
+- Pertanyaan
+
+#### 2.4.2 Membuat Permainan
+#### Dragon
+
+- Hasil Program
+- Hasil Running
+- Pertanyaan
+
+#### Dragon Main
+
+- Hasil Program
+- Hasil Running
+- Pertanyaan
+
 
