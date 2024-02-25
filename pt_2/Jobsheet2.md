@@ -235,7 +235,7 @@ public class BukuMain21 {
     bk2.tampilInformasi();
 
     }
-    
+
 }
 
 - Verifikasi Hasil Percobaan
@@ -244,16 +244,17 @@ public class BukuMain21 {
 - Pertanyaan
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
 mendeklarasikan konstruktor berparameter!
-1. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
-2. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
 hasilnya? Jelaskan mengapa hasilnya demikian!
-1. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
 secara berurutan? Jelaskan alasannya!
-1. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
+5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
 berparameter dari class Buku!
+
 - jawaban
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
-2. 
+ 
         judul = jud;
 
         pengarang = pg;
@@ -265,15 +266,15 @@ berparameter dari class Buku!
         harga = har;
 
 }
-1. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
-2. 
+2. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
+3. 
 ![alt text](<Screenshot 2024-02-25 202330.png>)
 
    Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
 
-1. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
+4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
 
-2. package pt_2;
+5. package pt_2;
 
 public class BukuMain21 {
 
