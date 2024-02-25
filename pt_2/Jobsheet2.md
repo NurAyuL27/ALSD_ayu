@@ -20,28 +20,42 @@
 - Hasil Program
 
   package pt_2;
+
 public class Buku21 {
+
    String judul, pengarang;
+
    int halaman, stok, harga;
    
    void tampilInformasi() {
+    
         System.out.println("Judul: " + judul);
+
         System.out.println("pengarang: " + pengarang);
+
         System.out.println("Jumlah halaman: " + halaman);
+
         System.out.println("Sisa Stok: " + stok);
+
         System.out.println("Harga: " + harga);
     }
 
    void terjual(int jml){
+
         stok -= jml;
+
     }
 
     void restock(int jml){
+
         stok += jml;
+
     }
 
     void gantiHarga(int hrg){
+
         harga = hrg;
+
     }
 }
 
@@ -65,15 +79,21 @@ public class Buku21 {
 - Hasil Program
   
   package pt_2;
+
     public class BukuMain21 {
+
     public static void main(String[] args) {
         
     Buku21 bk1 = new Buku21();
 
     bk1.judul = "Today Ends Tomorrow Comes";
+
     bk1.pengarang = "Denanda Pratiwi";
+
     bk1.halaman = 198;
+
     bk1.stok = 13;
+
     bk1.harga = 71000;
 
     bk1.tampilInformasi();
@@ -108,43 +128,64 @@ Apa nama object yang dihasilkan?
 - Hasil Program
   
   package pt_2;
+
 public class Buku21 {
+
    String judul, pengarang;
+
    int halaman, stok, harga;
 
    public Buku21() {
    
 }
         public Buku21(String jud, String pg, int hal, int stok, int har) {
+
         judul = jud;
+
         pengarang = pg;
+
         halaman = hal;
+
         this.stok = stok;
+
         harga = har;
 }
    
    void tampilInformasi() {
+
         System.out.println("Judul: " + judul);
+
         System.out.println("pengarang: " + pengarang);
+
         System.out.println("Jumlah halaman: " + halaman);
+
         System.out.println("Sisa Stok: " + stok);
+
         System.out.println("Harga: " + harga);
     }
 
    void terjual(int jml){
+
         stok -= jml;
+
     }
 
     void restock(int jml){
+
         stok += jml;
+
     }
 
     void gantiHarga(int hrg){
+
         harga = hrg;
+
     }
 
     int hitungHargaTotal() {
+
         return harga * stok;
+
     }
 }
 
@@ -152,15 +193,21 @@ public class Buku21 {
 - Hasil Program
   
 package pt_2;
+
 public class BukuMain21 {
+
     public static void main(String[] args) {
         
     Buku21 bk1 = new Buku21();
 
     bk1.judul = "Today Ends Tomorrow Comes";
+
     bk1.pengarang = "Denanda Pratiwi";
+
     bk1.halaman = 198;
+
     bk1.stok = 13;
+
     bk1.harga = 71000;
 
     bk1.tampilInformasi();
@@ -172,7 +219,9 @@ public class BukuMain21 {
     bk1.tampilInformasi();
 
     Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+
     bk2.terjual(11);
+
     bk2.tampilInformasi();
 
     }
@@ -193,11 +242,17 @@ secara berurutan? Jelaskan alasannya!
 berparameter dari class Buku!
 - jawaban
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
+2. 
         judul = jud;
+
         pengarang = pg;
+
         halaman = hal;
+
         this.stok = stok;
+
         harga = har;
+
 }
 1. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
 2. 
@@ -208,15 +263,21 @@ berparameter dari class Buku!
 1. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
 
 2. package pt_2;
+
 public class BukuMain21 {
+
     public static void main(String[] args) {
         
     Buku21 bk1 = new Buku21();
 
     bk1.judul = "Today Ends Tomorrow Comes";
+
     bk1.pengarang = "Denanda Pratiwi";
+
     bk1.halaman = 198;
+
     bk1.stok = 13;
+
     bk1.harga = 71000;
 
     bk1.tampilInformasi();
@@ -228,13 +289,17 @@ public class BukuMain21 {
     bk1.tampilInformasi();
 
     Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+
     bk2.terjual(11);
+
     bk2.tampilInformasi();
 
     Buku21 bukuMahasiswa = new Buku21("Ayat Ayat Cinta", "Tereliye", 150, 10, 50000);
+
     bukuMahasiswa.tampilInformasi();
 
     }
+
 }
 
 ![alt text](<Screenshot 2024-02-25 210500.png>)
@@ -247,81 +312,125 @@ public class BukuMain21 {
 - Hasil Program
   
 package pt_2;
+
 public class Buku21 {
+
    String judul, pengarang;
+
    int halaman, stok, harga;
 
    public Buku21() {
    
 }
         public Buku21(String jud, String pg, int hal, int stok, int har) {
+
         judul = jud;
+
         pengarang = pg;
+
         halaman = hal;
+
         this.stok = stok;
+
         harga = har;
 }
    
    void tampilInformasi() {
+
         System.out.println("Judul: " + judul);
+
         System.out.println("pengarang: " + pengarang);
+
         System.out.println("Jumlah halaman: " + halaman);
+
         System.out.println("Sisa Stok: " + stok);
+
         System.out.println("Harga: " + harga);
+
     }
 
    void terjual(int jml){
+
         stok -= jml;
+
     }
 
     void restock(int jml){
+
         stok += jml;
+
     }
 
     void gantiHarga(int hrg){
+
         harga = hrg;
+
     }
 
     int hitungHargaTotal() {
+
         return harga * stok;
+
     }
 
     int hitungDiskon() {
+
         int hargaTotal = hitungHargaTotal();
+
         if (hargaTotal > 150000) {
+
             return hargaTotal * 12 / 100;   
+
         } else if (hargaTotal >= 150000) {
+
             return hargaTotal * 5 / 100;
+
         } else {
+
             return 0;
+
         }
+
     }
 
     int hitungBayar() {
+
         int hargaTotal = hitungHargaTotal();
+
         int diskon = hitungDiskon();
+
         return hargaTotal - diskon;
+
     }
+
 }
 
 - Program Kedua
 - Hasil Program
   
   package pt_2;
+
 public class BukuMain21 {
+
     public static void main(String[] args) {
         
     Buku21 bk1 = new Buku21();
 
     bk1.judul = "Today Ends Tomorrow Comes";
     bk1.pengarang = "Denanda Pratiwi";
+
     bk1.halaman = 198;
+
     bk1.stok = 13;
+
     bk1.harga = 71000;
 
     bk1.tampilInformasi();
+
     System.out.println("Total harga: " + bk1.hitungHargaTotal());
+
     System.out.println("Diskon: " + bk1.hitungDiskon());
+
     System.out.println("Total Bayar: " + bk1.hitungBayar());
 
     bk1.terjual(5);
@@ -331,12 +440,19 @@ public class BukuMain21 {
     bk1.tampilInformasi();
 
     Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+
     bk2.terjual(11);
+
     bk2.tampilInformasi();
+
     System.out.println("Total Harga: " + bk2.hitungHargaTotal());
+
     System.out.println("Diskon: " + bk2.hitungDiskon());
+
     System.out.println("Total Bayar: " + bk2.hitungBayar());
+
     }
+
 }
 
 - Hasil Percobaan
@@ -353,80 +469,135 @@ package pt_2;
 import java.util.Scanner;
 
 public class Dragon21 {
+
     int x, y, width, height;
+
     Scanner sc = new Scanner(System.in);    
 
     void moveLeft() {
+
         x -= 1;
+
         if (x < 0 || x > width) {
+
             detectCollision();
+
         } 
+
     }
 
     void moveRight() {
+
         x += 1;
+
         if (x < 0 || x > width) {
+
             detectCollision();
+
         }
+
     }
 
     void moveUp() {
+
         y -= 1;
+
         if (y < 0 || y > height) {
+
             detectCollision();
+
         } 
+
     }
 
     void moveDown() {
+
         y += 1;
+
         if (y < 0 || y > height) {
+
             detectCollision();
+
         } 
+
     }
 
     void printPosition() {
+
         System.out.println("Dragon position: " + x + ","  + y );
+
     }
 
     void detectCollision() {
+
         System.out.println("Game Over!");
+
         System.exit(0);
         
     }
 
     void loopingGame() {
+
         while (x > 0 && x < width && y > 0 && y < height) { 
+
             System.out.print("Masukkan left / right / up / down : ");
+
             String pilih = sc.nextLine();
+
             System.out.println();
+
             switch (pilih) {
+
                 case "left":
+
                     moveLeft();
+
                     break;
+
                 case "right":
+
                     moveRight();
+
                     break;
+
                 case "up":
+
                     moveUp();
+                    
                     break;
+
                 case "down":
+
                     moveDown();
+
                     break;
+
                 default:
+
                     break;
+
             }
+
             printPosition();
+
         }
+
     }
+
     public Dragon21() {
 
     }
 
     public Dragon21(int x, int y, int width, int height) {
+
         this.x = x;
+
         this.y = y;
+
         this.width = width;
+
         this.height = height;
+
     }
 
 }
@@ -439,10 +610,13 @@ public class Dragon21 {
 - Hasil Program
   
   package pt_2;
+
 public class DragonMain {
+
     public static void main(String[] args) {
 
         Dragon21 game = new Dragon21(5, 5, 10, 10);
+        
             game.loopingGame();
     
     }
