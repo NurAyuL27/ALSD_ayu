@@ -57,7 +57,7 @@ public class Buku21 {
         harga = hrg;
 
     }
-    
+
 }
 
 
@@ -69,9 +69,13 @@ public class Buku21 {
 2. memiliki 5 atribut yaitu judul(string), pengarang(String), halaman(int), stok(int), harga(int)
 3. 3 method yaitu tampilInformasi(), terjual(int jml), restock(int jml)
 4.    void terjual(int jml){
+
        if (stok > 0) {
+
             stok -= jml;
+
        }
+
     }
 5. karena parameter tersebut menentukan jumlah tambahan stok yang akan ditambahkan. Dengan demikian, pengguna dapat menentukan seberapa banyak buku yang akan ditambahkan kedalam stok dengan menambahkan nilai numerik ke parameter.
 
@@ -106,6 +110,7 @@ public class Buku21 {
     bk1.tampilInformasi();
 
     }
+
 }
 
 
@@ -139,6 +144,7 @@ public class Buku21 {
    public Buku21() {
    
 }
+
         public Buku21(String jud, String pg, int hal, int stok, int har) {
 
         judul = jud;
@@ -150,6 +156,7 @@ public class Buku21 {
         this.stok = stok;
 
         harga = har;
+
 }
    
    void tampilInformasi() {
@@ -163,6 +170,7 @@ public class Buku21 {
         System.out.println("Sisa Stok: " + stok);
 
         System.out.println("Harga: " + harga);
+
     }
 
    void terjual(int jml){
@@ -188,6 +196,7 @@ public class Buku21 {
         return harga * stok;
 
     }
+
 }
 
 - Program Kedua
@@ -226,6 +235,7 @@ public class BukuMain21 {
     bk2.tampilInformasi();
 
     }
+    
 }
 
 - Verifikasi Hasil Percobaan
