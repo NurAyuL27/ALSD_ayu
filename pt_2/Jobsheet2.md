@@ -387,5 +387,5 @@ public class DragonMain {
 }
 
 - Hasil Program
-![alt text](<../Screenshot 2024-02-25 192011.png>)  
+![alt text](<Screenshot 2024-02-25 204034.png>)  
 
