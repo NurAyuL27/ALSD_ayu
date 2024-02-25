@@ -15,7 +15,7 @@
 <center> ## JOBSHEET II
 <center> ## OBJECT
 
-#### 2.1 Percobaan 1: Deklarasi Class, Atribut dan Metho
+#### 2.1 Percobaan 1: Deklarasi Class, Atribut dan Method
 
 - Hasil Program
   package pt_2;
@@ -86,7 +86,7 @@ public class Buku21 {
 
 
 - Verifikasi Hasil Percobaan
-![alt text](<Screenshot 2024-02-25 194857.png>)  
+<center> ![alt text](<Screenshot 2024-02-25 194857.png>)  
 - Pertanyaan
   1. Buku21 bk1 = new Buku21();
    nama objek yang dihasilkan adalah bk1
