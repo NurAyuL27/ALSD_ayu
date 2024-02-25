@@ -86,7 +86,7 @@ public class Buku21 {
 
 
 - Verifikasi Hasil Percobaan
-<center> ![alt text](<Screenshot 2024-02-25 194857.png>)  
+![alt text](<Screenshot 2024-02-25 194857.png>)  
 - Pertanyaan
 1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi!
 Apa nama object yang dihasilkan?
