@@ -178,6 +178,16 @@ public class BukuMain21 {
 
 ![alt text](<Screenshot 2024-02-25 195855.png>)  
 - Pertanyaan
+1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
+mendeklarasikan konstruktor berparameter!
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
+hasilnya? Jelaskan mengapa hasilnya demikian!
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
+secara berurutan? Jelaskan alasannya!
+5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
+berparameter dari class Buku!
+- jawaban
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
         judul = jud;
         pengarang = pg;
@@ -185,12 +195,14 @@ public class BukuMain21 {
         this.stok = stok;
         harga = har;
 }
-1. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
-2. ![alt text](<Screenshot 2024-02-25 202330.png>)
+2. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
+3. 
+![alt text](<Screenshot 2024-02-25 202330.png>)
 
    Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
-3. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
-4. ![alt text](<Screenshot 2024-02-25 210500.png>)
+4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
+5. 
+![alt text](<Screenshot 2024-02-25 210500.png>)
 
 #### 2.4 Latihan Praktikum
 
@@ -291,6 +303,7 @@ public class BukuMain21 {
 }
 
 - Hasil Percobaan
+  
 ![alt text](<Screenshot 2024-02-25 204034.png>)  
 
 #### 2.4.2 Membuat Permainan
@@ -397,5 +410,6 @@ public class DragonMain {
 }
 
 - Hasil Program
+
 ![alt text](<Screenshot 2024-02-25 204034.png>)  
 
