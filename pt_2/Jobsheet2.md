@@ -12,8 +12,8 @@
 <center>Phone: (0341) 404424,404425
 <center>E-mail: Polinema.ac.id
 
-### JOBSHEET II
-### OBJECT
+<center> ## JOBSHEET II
+<center> ## OBJECT
 
 #### 2.1 Percobaan 1: Deklarasi Class, Atribut dan Metho
 
@@ -45,10 +45,10 @@ public class Buku21 {
 }
 
 
-- Hasil Running
-
+- Verifikasi Hasil Percobaan
+![alt text](<Screenshot 2024-02-19 102838.png>)
 - Pertanyaan
-1. abstrac dan 
+1. atribut dan method
 2. memiliki 5 atribut yaitu judul(string), pengarang(String), halaman(int), stok(int), harga(int)
 3. 3 method yaitu tampilInformasi(), terjual(int jml), restock(int jml)
 4.    void terjual(int jml){
@@ -85,8 +85,8 @@ public class Buku21 {
 }
 
 
-- Hasil Running
-  
+- Verifikasi Hasil Percobaan
+![alt text](<Screenshot 2024-02-25 194857.png>)  
 - Pertanyaan
   1. Buku21 bk1 = new Buku21();
    nama objek yang dihasilkan adalah bk1
@@ -166,8 +166,8 @@ public class BukuMain21 {
     }
 }
 
-- Hasil Running
-  
+- Verifikasi Hasil Percobaan
+![alt text](<Screenshot 2024-02-25 195855.png>)  
 - Pertanyaan
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
         judul = jud;
@@ -176,12 +176,17 @@ public class BukuMain21 {
         this.stok = stok;
         harga = har;
 }
-2. 
+2. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
+3. ![alt text](<Screenshot 2024-02-25 202330.png>)
+   Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
+4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
+5. 
 
 #### 2.4 Latihan Praktikum
 
 #### 2.4.1 Menambahkan Metode
 
+- Program Pertama
 - Hasil Program
 package pt_2;
 public class Buku21 {
@@ -240,6 +245,43 @@ public class Buku21 {
         return hargaTotal - diskon;
     }
 }
+
+- Program Kedua
+- Hasil Program
+  package pt_2;
+public class BukuMain21 {
+    public static void main(String[] args) {
+        
+    Buku21 bk1 = new Buku21();
+
+    bk1.judul = "Today Ends Tomorrow Comes";
+    bk1.pengarang = "Denanda Pratiwi";
+    bk1.halaman = 198;
+    bk1.stok = 13;
+    bk1.harga = 71000;
+
+    bk1.tampilInformasi();
+    System.out.println("Total harga: " + bk1.hitungHargaTotal());
+    System.out.println("Diskon: " + bk1.hitungDiskon());
+    System.out.println("Total Bayar: " + bk1.hitungBayar());
+
+    bk1.terjual(5);
+
+    bk1.gantiHarga(60000);
+
+    bk1.tampilInformasi();
+
+    Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+    bk2.terjual(11);
+    bk2.tampilInformasi();
+    System.out.println("Total Harga: " + bk2.hitungHargaTotal());
+    System.out.println("Diskon: " + bk2.hitungDiskon());
+    System.out.println("Total Bayar: " + bk2.hitungBayar());
+    }
+}
+
+- Hasil Percobaan
+![alt text](<Screenshot 2024-02-25 204034.png>)  
 
 #### 2.4.2 Membuat Permainan
 #### Dragon
@@ -344,5 +386,6 @@ public class DragonMain {
     }
 }
 
-- Hasil Running
+- Hasil Program
+![alt text](<../Screenshot 2024-02-25 192011.png>)  
 
