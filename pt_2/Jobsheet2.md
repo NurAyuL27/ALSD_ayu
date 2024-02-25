@@ -18,6 +18,7 @@
 #### 2.1 Percobaan 1: Deklarasi Class, Atribut dan Method
 
 - Hasil Program
+
   package pt_2;
 public class Buku21 {
    String judul, pengarang;
@@ -62,6 +63,7 @@ public class Buku21 {
 #### 2.2 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 
 - Hasil Program
+  
   package pt_2;
     public class BukuMain21 {
     public static void main(String[] args) {
@@ -104,6 +106,7 @@ Apa nama object yang dihasilkan?
 #### 2.3 Percobaan 3: Membuat Konstruktor
 - Program Pertama
 - Hasil Program
+  
   package pt_2;
 public class Buku21 {
    String judul, pengarang;
@@ -147,6 +150,7 @@ public class Buku21 {
 
 - Program Kedua
 - Hasil Program
+  
 package pt_2;
 public class BukuMain21 {
     public static void main(String[] args) {
@@ -180,12 +184,12 @@ public class BukuMain21 {
 - Pertanyaan
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
 mendeklarasikan konstruktor berparameter!
-2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
-3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
+1. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+2. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
 hasilnya? Jelaskan mengapa hasilnya demikian!
-4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
+1. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
 secara berurutan? Jelaskan alasannya!
-5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
+1. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
 berparameter dari class Buku!
 - jawaban
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
@@ -195,13 +199,44 @@ berparameter dari class Buku!
         this.stok = stok;
         harga = har;
 }
-2. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
-3. 
+1. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
+2. 
 ![alt text](<Screenshot 2024-02-25 202330.png>)
 
    Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
-4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
-5. 
+
+1. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
+
+2. package pt_2;
+public class BukuMain21 {
+    public static void main(String[] args) {
+        
+    Buku21 bk1 = new Buku21();
+
+    bk1.judul = "Today Ends Tomorrow Comes";
+    bk1.pengarang = "Denanda Pratiwi";
+    bk1.halaman = 198;
+    bk1.stok = 13;
+    bk1.harga = 71000;
+
+    bk1.tampilInformasi();
+
+    bk1.terjual(5);
+
+    bk1.gantiHarga(60000);
+
+    bk1.tampilInformasi();
+
+    Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+    bk2.terjual(11);
+    bk2.tampilInformasi();
+
+    Buku21 bukuMahasiswa = new Buku21("Ayat Ayat Cinta", "Tereliye", 150, 10, 50000);
+    bukuMahasiswa.tampilInformasi();
+
+    }
+}
+
 ![alt text](<Screenshot 2024-02-25 210500.png>)
 
 #### 2.4 Latihan Praktikum
@@ -210,6 +245,7 @@ berparameter dari class Buku!
 
 - Program Pertama
 - Hasil Program
+  
 package pt_2;
 public class Buku21 {
    String judul, pengarang;
@@ -270,6 +306,7 @@ public class Buku21 {
 
 - Program Kedua
 - Hasil Program
+  
   package pt_2;
 public class BukuMain21 {
     public static void main(String[] args) {
@@ -310,6 +347,7 @@ public class BukuMain21 {
 #### Dragon
 
 - Hasil Program
+  
 package pt_2;
 
 import java.util.Scanner;
@@ -399,6 +437,7 @@ public class Dragon21 {
 #### Dragon Main
 
 - Hasil Program
+  
   package pt_2;
 public class DragonMain {
     public static void main(String[] args) {
