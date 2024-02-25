@@ -37,21 +37,4 @@ public class Buku21 {
     int hitungHargaTotal() {
         return harga * stok;
     }
-
-    int hitungDiskon() {
-        int hargaTotal = hitungHargaTotal();
-        if (hargaTotal > 150000) {
-            return hargaTotal * 12 / 100;   
-        } else if (hargaTotal >= 150000) {
-            return hargaTotal * 5 / 100;
-        } else {
-            return 0;
-        }
-    }
-
-    int hitungBayar() {
-        int hargaTotal = hitungHargaTotal();
-        int diskon = hitungDiskon();
-        return hargaTotal - diskon;
-    }
 }

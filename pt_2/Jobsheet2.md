@@ -88,6 +88,12 @@ public class Buku21 {
 - Verifikasi Hasil Percobaan
 <center> ![alt text](<Screenshot 2024-02-25 194857.png>)  
 - Pertanyaan
+1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi!
+Apa nama object yang dihasilkan?
+2. Bagaimana cara mengakses atribut dan method dari suatu objek?
+3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?
+   
+- jawaban
   1. Buku21 bk1 = new Buku21();
    nama objek yang dihasilkan adalah bk1
   2. untuk mengaksesnya dari suatu objek digunakan operator titik('.'). seperti bk1.judul atau bk1.terjual()
@@ -180,7 +186,7 @@ public class BukuMain21 {
 3. ![alt text](<Screenshot 2024-02-25 202330.png>)
    Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
 4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
-5. 
+5. ![alt text](<Screenshot 2024-02-25 210500.png>)
 
 #### 2.4 Latihan Praktikum
 

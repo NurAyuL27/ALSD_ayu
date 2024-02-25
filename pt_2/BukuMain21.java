@@ -11,9 +11,6 @@ public class BukuMain21 {
     bk1.harga = 71000;
 
     bk1.tampilInformasi();
-    System.out.println("Total harga: " + bk1.hitungHargaTotal());
-    System.out.println("Diskon: " + bk1.hitungDiskon());
-    System.out.println("Total Bayar: " + bk1.hitungBayar());
 
     bk1.terjual(5);
 
@@ -24,8 +21,9 @@ public class BukuMain21 {
     Buku21 bk2 = new Buku21("Self Reward", "Maheera Ayesha", 160, 29, 59000);
     bk2.terjual(11);
     bk2.tampilInformasi();
-    System.out.println("Total Harga: " + bk2.hitungHargaTotal());
-    System.out.println("Diskon: " + bk2.hitungDiskon());
-    System.out.println("Total Bayar: " + bk2.hitungBayar());
+
+    Buku21 bukuMahasiswa = new Buku21("Ayat Ayat Cinta", "Tereliye", 150, 10, 50000);
+    bukuMahasiswa.tampilInformasi();
+
     }
 }
