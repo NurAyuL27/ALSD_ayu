@@ -46,6 +46,7 @@ public class Buku21 {
 
 
 - Verifikasi Hasil Percobaan
+
 ![alt text](<Screenshot 2024-02-19 102838.png>)
 - Pertanyaan
 1. atribut dan method
@@ -86,12 +87,13 @@ public class Buku21 {
 
 
 - Verifikasi Hasil Percobaan
+
 ![alt text](<Screenshot 2024-02-25 194857.png>)  
 - Pertanyaan
 1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi!
 Apa nama object yang dihasilkan?
-2. Bagaimana cara mengakses atribut dan method dari suatu objek?
-3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?
+1. Bagaimana cara mengakses atribut dan method dari suatu objek?
+2. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?
    
 - jawaban
   1. Buku21 bk1 = new Buku21();
@@ -173,6 +175,7 @@ public class BukuMain21 {
 }
 
 - Verifikasi Hasil Percobaan
+
 ![alt text](<Screenshot 2024-02-25 195855.png>)  
 - Pertanyaan
 1. public Buku21(String jud, String pg, int hal, int stok, int har) {
@@ -182,11 +185,12 @@ public class BukuMain21 {
         this.stok = stok;
         harga = har;
 }
-2. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
-3. ![alt text](<Screenshot 2024-02-25 202330.png>)
+1. pada baris program tersebut, objek bk2 dari class Buku 21 dibuat menggunakan konstruktor berparameter. Konstruktor ini menginialisasi nilai atribut pada saat pembuatan objek.
+2. ![alt text](<Screenshot 2024-02-25 202330.png>)
+
    Akan terjadi kesalahan kompilasi. Hal ini terjadi karena menghapus konstruktor default, tidak ada konstruktor yang bisa di gunakan untuk membuat objek tanpa parameter.
-4. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
-5. ![alt text](<Screenshot 2024-02-25 210500.png>)
+3. tidak, karena kita dapat memanggil method manapun di dalam class buku sesuai kebutuhan atau urutan yang diinginkan.
+4. ![alt text](<Screenshot 2024-02-25 210500.png>)
 
 #### 2.4 Latihan Praktikum
 
