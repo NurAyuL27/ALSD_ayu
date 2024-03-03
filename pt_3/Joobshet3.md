@@ -57,13 +57,27 @@ public class ArrayObjects {
 - Pertanyaan
 1. Berdasarkan uji coba 3.2, apakah class yang akan dibuat array of object harus selalu memiliki
 atribut dan sekaligus method?Jelaskan!
-2. Apakah class PersegiPanjang memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan
-konstruktur pada baris program berikut :
+2. Apakah class PersegiPanjang memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan konstruktur pada baris program berikut :
+   ppArray[1] = new PersegiPanjang();
 3. Apa yang dimaksud dengan kode berikut ini:
+   PersegiPanjang[] ppArray = new PersegiPanjang[3];
 4. Apa yang dimaksud dengan kode berikut ini:
+   ppArray[1] = new PersegiPanjang();
+   ppArray[1].panjang = 80;
+   ppArray[1].lebar = 40;
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
      
 - Jawaban 
+1. tidak, karena class yang akan dibuat sebagai array of object tidak harus selalu memiliki atribut dan method. seperti program di atas memiliki class PersegiPanjang tetapi hanya memiliki atribut panjang dan lebar tanpa adanya method.
+2. Tidak, Karena pemanggilan konstruktor pada baris program tersebut dilakukan untuk membuat objek baru dari kelas PersegiPanjang itu terjadi karena java masih memanggil konstruktor default secara implisit meskipun konstruktor default tidak didefinisikan.
+3. Kode tersebut mendeklarasikan sebuah array yang berisis objek objek dari kelas PersegiPanjang
+4. ppArray[1] = new PersegiPanjang();
+   adalah pembuatan objek baru dari kelas PersegiPanjang dan menyimpannya di indeks ke 1 dari array ppArray
+   ppArray[1].panjang = 80;
+   mengatur nilai panjang dari objaek pada indeks ke 1 dari array ppArray menjadi 80
+   ppArray[1].lebar = 40;
+   mengatur nilai lebar dari objaek pada indeks ke 1 dari array ppArray menjadi 40
+5. untuk membantu menjaga kode program agar lebih terorganisir, mudah dibaca, dan lebih mudah rawat.
 
 #### 2.2 Percobaan 2: Menerima Input Isian Array Menggunakan Looping
 
@@ -320,20 +334,140 @@ public class MainBangunRuang {
   
 ![alt text](<Screenshot 2024-02-25 204034.png>)  
 
-#### 2.4.2 Membuat Permainan
+#### 2.4.2 Membuat informasi mahasiswa
 #### Dragon
 
 - Hasil Program
 
+package pt_3;
+import java.util.Scanner;
+
+public class InformasiMahasiswa {
+    public static class Mahasiswa {
+        public String nama;
+        public String nim;
+        public String jenisKelamin;
+        public double ipk;
+    }
+        
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
+
+        Mahasiswa[] mahasiswasArray = new Mahasiswa[jumlahMahasiswa];
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            mahasiswasArray[i] = new Mahasiswa();
+            System.out.println("Data mahasiswa ke-" + (i + 1));
+            sc.nextLine();
+            System.out.print("Masukkan Nama: ");
+            mahasiswasArray[i].nama = sc.nextLine();
+            System.out.print("Masukkan NIM: ");
+            mahasiswasArray[i].nim = sc.nextLine();
+            System.out.print("Masukkan jenis kelamin: ");
+            mahasiswasArray[i].jenisKelamin = sc.nextLine();
+            System.out.print("Masukkan IPK: ");
+            mahasiswasArray[i].ipk = sc.nextDouble();
+            System.out.println();
+        }
+        
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.println("Data Mahasiswa ke-" + (i + 1));
+            System.out.println("Nama : " + mahasiswasArray[i].nama);
+            System.out.println("NIM : " + mahasiswasArray[i].nim);
+            System.out.println("Jenis kelamin : " + mahasiswasArray[i].jenisKelamin);
+            System.out.println("Nilai IPK : " + mahasiswasArray[i].ipk);
+        }
+    }
+}
 
 - Hasil Running
 
-#### Dragon Main
+#### Modifikasi informasi mahasiswa
 
 - Hasil Program
-  
+package pt_3;
+import java.util.Scanner;
 
-- Hasil Program
+public class InformasiMahasiswa {
+    public static class Mahasiswa {
+        public String nama;
+        public String nim;
+        public String jenisKelamin;
+        public double ipk;
+    }
+        
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
 
-![alt text](<Screenshot 2024-02-25 204034.png>)  
+        Mahasiswa[] mahasiswasArray = new Mahasiswa[jumlahMahasiswa];
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            mahasiswasArray[i] = new Mahasiswa();
+            System.out.println("Data mahasiswa ke-" + (i + 1));
+            sc.nextLine();
+            System.out.print("Masukkan Nama: ");
+            mahasiswasArray[i].nama = sc.nextLine();
+            System.out.print("Masukkan NIM: ");
+            mahasiswasArray[i].nim = sc.nextLine();
+            System.out.print("Masukkan jenis kelamin: ");
+            mahasiswasArray[i].jenisKelamin = sc.nextLine();
+            System.out.print("Masukkan IPK: ");
+            mahasiswasArray[i].ipk = sc.nextDouble();
+            System.out.println();
+        }
+
+        tampilkanDataMahasiswa(mahasiswasArray, jumlahMahasiswa);
+        hitungRataRataIPK(mahasiswasArray, jumlahMahasiswa);
+        tampilHasilIPK(mahasiswasArray, jumlahMahasiswa);
+    }
+
+        public static void tampilkanDataMahasiswa(Mahasiswa[] mahasiswasArray, int jumlahMahasiswa) {
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.println("Data Mahasiswa ke-" + (i + 1));
+            System.out.println("Nama : " + mahasiswasArray[i].nama);
+            System.out.println("NIM : " + mahasiswasArray[i].nim);
+            System.out.println("Jenis kelamin : " + mahasiswasArray[i].jenisKelamin);
+            System.out.println("Nilai IPK : " + mahasiswasArray[i].ipk);
+        }
+    }
+
+    public static void hitungRataRataIPK(Mahasiswa[] mahasiswasArray, int jumlahMahasiswa) {
+        double totalIPK = 0;
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            totalIPK += mahasiswasArray[i].ipk;
+        }
+        double rataRta = totalIPK / jumlahMahasiswa;
+        System.out.println();
+        System.out.println("Rata rata IPK dari " + jumlahMahasiswa + " mahasiswa " + rataRta);
+    }
+
+
+    public static void tampilHasilIPK(Mahasiswa[] mahasiswasArray, int jumlahMahasiswa) {
+        double maxlIPK = mahasiswasArray[0].ipk;
+        int indexMax = 0;
+        for (int i = 1; i < jumlahMahasiswa; i++) {
+            if (mahasiswasArray[i].ipk > maxlIPK) {
+                maxlIPK = mahasiswasArray[i].ipk;
+                indexMax = i;
+            }
+        }
+
+        System.out.println();
+        System.out.println("Mahasiswa dengan IPK tertinggi: ");
+        System.out.println("Nama: " + mahasiswasArray[indexMax].nama);
+        System.out.println("NIM: " + mahasiswasArray[indexMax].nim);
+        System.out.println("Jenis kelamin: " + mahasiswasArray[indexMax].jenisKelamin);
+        System.out.println("Nilai IPK: " + mahasiswasArray[indexMax].ipk);
+    }
+}  
+
+- Hasil Running
+
+ ![alt text](<Screenshot 2024-03-03 143543.png>) 
+
+
 

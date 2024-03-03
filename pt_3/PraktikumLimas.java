@@ -7,7 +7,7 @@ public class PraktikumLimas {
         public double sisiMiring;
 
         double sisiMiringKerucut() {
-            sisiMiring = Math.sqrt(Math.pow(sisiAlas, 2) + Math.pow(tinggi, 2));
+            sisiMiring = Math.sqrt(Math.pow(sisiAlas/2, 2) + Math.pow(tinggi, 2));
             return sisiMiring;
         }
 
