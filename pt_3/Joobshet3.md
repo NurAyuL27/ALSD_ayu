@@ -565,7 +565,7 @@ public class MainBangunRuang {
 }
 
 - Hasil Percobaan
-![alt text](<Screenshot 2024-03-03 221537.png>) 
+img src=(<Screenshot 2024-03-03 221537.png>) 
   
 
 #### 2.4.2 Membuat informasi mahasiswa
@@ -616,7 +616,7 @@ public class InformasiMahasiswa {
 }
 
 - Hasil Running
-![alt text](<Screenshot 2024-03-03 214500.png>)
+img src=(<Screenshot 2024-03-03 214500.png>)
 
 #### Modifikasi informasi mahasiswa
 
