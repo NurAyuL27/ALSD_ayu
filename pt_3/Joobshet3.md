@@ -1,6 +1,8 @@
-## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 4
+## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 3
 
-<p align="center"> ![alt text](<logo polinema.png>)
+<p align="center"> 
+<img src="logo polinema.png" width="300px">
+
  <p align="center">  Nama : Nur Ayu Lailatul Azizah
  <p align="center">  Kelas : TI 1 H
  <p align="center">  NIM : 2341720044
@@ -114,25 +116,65 @@ public class ArrayObjects {
 - Verifikasi Hasil Percobaan
 
 ![alt text](<Screenshot 2024-02-26 101118.png>)
+
 - Pertanyaan
 1. Apakah array of object dapat diimplementasikan pada array 2 Dimensi?
 2. Jika jawaban soal no satu iya, berikan contohnya! Jika tidak, jelaskan!
-Algoritma dan Struktur Data 2023-2024
-4 Tim Ajar Algoritma dan Struktur Data 2023-2024
-Jurusan Teknologi Informasi-Politeknik Negeri Malang
-3. Jika diketahui terdapat class Persegi yang memiliki atribut sisi bertipe integer, maka kode
-dibawah ini akan memunculkan error saat dijalankan. Mengapa?
+3. Jika diketahui terdapat class Persegi yang memiliki atribut sisi bertipe integer, maka kode dibawah ini akan memunculkan error saat dijalankan. Mengapa?
+   Persegi[] pgArray = new Persegi [1000];
+   pgArray[5].sisi = 20;
 4. Modifikasi kode program pada praktikum 3.3 agar length array menjadi inputan dengan Scanner!
 5. Apakah boleh Jika terjadi duplikasi instansiasi array of objek, misalkan saja instansiasi dilakukan
 pada ppArray[i] sekaligus ppArray[0]?Jelaskan !
    
 - jawaban
+1. Ya array of object dapat diimplementasikan pada array dua dimensi. 
+2. 
+   package pt_3;
+import java.util.Scanner;
+public class ArrayObjects {
+    public static class PersegiPanjang {
+        public int panjang;
+        public int lebar;
 
+        public PersegiPanjang(int panjang, int lebar) {
+            this.panjang = panjang;
+            this.lebar = lebar;
+        }
+        
+    }
 
-#### 2.3 Percobaan 3: Penambahan Operasi Matematika di Dalam Method
-- Hasil Program
-  
- package pt_3;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        PersegiPanjang[][] ppArray = new PersegiPanjang[3][3];
+
+        
+
+        for(int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+            System.out.println("Persegi panjang ke- [" + i + "][" + j + "]");
+            System.out.print("Masukkan panjang: ");
+            int panjang = sc.nextInt();
+            System.out.print("Masukkan lebar: ");
+            int lebar = sc.nextInt();
+            ppArray[i][j] = new PersegiPanjang(panjang, lebar);
+            }
+        }
+
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+            System.out.println("Persegi panjang ke- [" + i + "][" + j + "]");
+            System.out.println("Panjang: " + ppArray[i][j].panjang + ", lebar: " + ppArray[i][j].lebar);
+            }
+        }
+    }
+}
+3. Persegi[] pgArray = new Persegi [1000];
+   kode program tersebut tidak memiliki objek Persegi sehingga mengakibatkan pada saat mengakses kode dibawah ini 
+   pgArray[5].sisi = 20;
+   akan muncul NullPointerException
+4. 
+   package pt_3;
 import java.util.Scanner;
 public class ArrayObjects {
     public static class PersegiPanjang {
@@ -142,11 +184,13 @@ public class ArrayObjects {
     }
 
     public static void main(String[] args) {
-        PersegiPanjang[] ppArray = new PersegiPanjang[3];
-
         Scanner sc = new Scanner(System.in);
 
-        for(int i = 0; i < 3; i++) {
+        System.out.println("Masukkan panjang array: ");
+        int length = sc.nextInt();
+        PersegiPanjang[] ppArray = new PersegiPanjang[length];
+
+        for(int i = 0; i < length; i++) {
             ppArray[i] = new PersegiPanjang();
             System.out.println("Persegi panjang ke- " + i);
             System.out.print("Masukkan panjang: ");
@@ -154,20 +198,212 @@ public class ArrayObjects {
             System.out.print("Masukkan lebar: ");
             ppArray[i].lebar = sc.nextInt();
         }
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < length; i++) {
             System.out.println("Persegi panjang ke- " + i);
             System.out.println("Panjang: " + ppArray[i].panjang + ", lebar: " + ppArray[i].lebar);
         }
     }
 }
+Hasil Program 
 
+![alt text](<Screenshot 2024-03-03 205310.png>)
+5. Tidak boleh terjadi karena memungkinkan dan akan menghasilkan kesalahan komplikasi.
+
+#### 2.3 Percobaan 3: Penambahan Operasi Matematika di Dalam Method
+- Hasil Program
+  
+package pt_3;
+import java.util.Scanner;
+public class ArrayBalok {
+    public static class Balok {
+        public int panjang;
+        public int lebar;
+        public int tinggi;
+
+       public Balok(int p, int l, int t) {
+            panjang = p;
+            lebar = l;
+            tinggi = t;
+        }
+
+        public int hitungVolume() {
+            return panjang * lebar * tinggi;
+        }
+    }
+
+    public static void main(String[] args) {
+       Balok[] blArray = new Balok[3];
+
+       blArray[0] = new Balok(100, 30, 12);
+       blArray[1] = new Balok(120, 40, 15);
+       blArray[2] = new Balok(210, 50, 25);
+
+        for(int i = 0; i < 3; i++) {
+            System.out.println("Volume Balok ke " + i + ": " + blArray[i].hitungVolume());
+        }
+    }
+}
 
 - Verifikasi Hasil Percobaan
-
-![alt text](<Screenshot 2024-02-26 103025.png>)
+  
+![alt text](<Screenshot 2024-03-03 210310.png>)
 - Pertanyaan
+1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh!
+2. Jika diketahui terdapat class Segitiga seperti berikut ini:
+   public class Segitiga {
+    public int alas;
+    public int tinggi;
+   }
+Tambahkan konstruktor pada class Segitiga tersebut yang berisi parameter int a, int t yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi.
+3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga tersebut. Asumsi segitiga adalah segitiga siku-siku. (Hint: Anda dapat menggunakan bantuan
+library Math pada Java untuk mengkalkulasi sisi miring)
+4. Pada fungsi main, buat array Segitiga sgArray yang berisi 4 elemen, isikan masing-masing atributnya sebagai berikut:
+sgArray ke-0 alas: 10, tinggi: 4
+sgArray ke-1 alas: 20, tinggi: 10
+sgArray ke-2 alas: 15, tinggi: 6
+sgArray ke-3 alas: 25, tinggi: 10
+Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKeliling().
+5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKeliling().
 
 - jawaban
+1. ya.
+
+public class Balok {
+    public int panjang;
+    public int lebar;
+    public int tinggi;
+    
+    public Balok() {
+    panjang = 0;
+    lebar = 0;
+    tinggi = 0;
+    }
+    
+    public Balok(int p, int 1, int t) {
+    panjang = p;
+    lebar = 1;
+    tinggi = t;
+    }
+    
+    public Balok(int p, int 1) {
+    panjang = p;
+    lebar = 1;
+    tinggi = 0;
+    }
+    
+    public Balok(int sisi) {
+    panjang = sisi;
+    lebar = sisi;
+    tinggi = sisi;
+    }
+    
+    public int hitungVolume() {
+    return panjang * lebar * tinggi;
+    }
+}
+2. 
+   public class Segitiga {
+    public int alas;
+    public int tinggi;
+
+   public Segitiga(int a, int t) {
+    alas = a;
+    tinggi = t;
+   }
+}
+3. 
+import java.lang.Math;
+public class Segitiga {
+    public int alas;
+    public int tinggi;
+
+   public Segitiga(int a, int t) {
+    alas = a;
+    tinggi = t;
+   }
+   public double hitungLuas() {
+    return 0.5 * alas * tinggi;
+   }
+   public double hitungKeliling() {
+    double sisiMiring = Math.sqrt(alas * alas + tinggi * tinggi);
+    return alas + tinggi sisiMiring;
+   }
+}
+
+4. 
+package pt_3;
+import java.lang.Math;
+public class Segitiga {
+    public int alas;
+    public int tinggi;
+
+   public Segitiga(int a, int t) {
+    alas = a;
+    tinggi = t;
+   }
+
+   public double hitungLuas() {
+    return 0.5 * alas * tinggi;
+   }
+
+   public double hitungKeliling() {
+    double sisiMiring = Math.sqrt(alas * alas + tinggi * tinggi);
+    return alas + tinggi + sisiMiring;
+   }
+
+   public static void main(String[] args) {
+        Segitiga[] sgArray = new Segitiga[4];
+
+        sgArray[0] = new Segitiga (10, 4);
+        sgArray[1] = new Segitiga (20, 10);
+        sgArray[2] = new Segitiga(15, 6);
+        sgArray[3] = new Segitiga (25, 10);
+    }
+}
+
+5. 
+    package pt_3;
+import java.lang.Math;
+public class Segitiga {
+    public int alas;
+    public int tinggi;
+
+   public Segitiga(int a, int t) {
+    alas = a;
+    tinggi = t;
+   }
+
+   public double hitungLuas() {
+    return 0.5 * alas * tinggi;
+   }
+
+   public double hitungKeliling() {
+    double sisiMiring = Math.sqrt(alas * alas + tinggi * tinggi);
+    return alas + tinggi + sisiMiring;
+   }
+
+   public static void main(String[] args) {
+        Segitiga[] sgArray = new Segitiga[4];
+
+        sgArray[0] = new Segitiga (10, 4);
+        sgArray[1] = new Segitiga (20, 10);
+        sgArray[2] = new Segitiga(15, 6);
+        sgArray[3] = new Segitiga (25, 10);
+
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Segitiga ke-" + i + ":");
+            System.out.println("Alas: " + sgArray[i].alas + ", Tinggi: " + sgArray[i].tinggi);
+            System.out.println("Luas: " + sgArray[i].hitungLuas());
+            System.out.println("Keliling: " + sgArray[i].hitungKeliling());
+            System.out.println();
+
+        }
+    }
+}
+
+   Hasil Program
+
+![alt text](<Screenshot 2024-03-03 213241.png>)
 
 
 #### 2.4 Latihan Praktikum
