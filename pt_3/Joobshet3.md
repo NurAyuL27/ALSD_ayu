@@ -207,6 +207,7 @@ public class ArrayObjects {
 Hasil Program 
 
 ![alt text](<Screenshot 2024-03-03 205310.png>)
+
 5. Tidak boleh terjadi karena memungkinkan dan akan menghasilkan kesalahan komplikasi.
 
 #### 2.3 Percobaan 3: Penambahan Operasi Matematika di Dalam Method
@@ -247,6 +248,7 @@ public class ArrayBalok {
 - Verifikasi Hasil Percobaan
   
 ![alt text](<Screenshot 2024-03-03 210310.png>)
+
 - Pertanyaan
 1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh!
 2. Jika diketahui terdapat class Segitiga seperti berikut ini:
@@ -562,13 +564,11 @@ public class MainBangunRuang {
     }
 }
 
-
 - Hasil Percobaan
+![alt text](<Screenshot 2024-03-03 221537.png>) 
   
-![alt text](<Screenshot 2024-02-25 204034.png>)  
 
 #### 2.4.2 Membuat informasi mahasiswa
-#### Dragon
 
 - Hasil Program
 
@@ -616,6 +616,7 @@ public class InformasiMahasiswa {
 }
 
 - Hasil Running
+![alt text](<Screenshot 2024-03-03 214500.png>)
 
 #### Modifikasi informasi mahasiswa
 

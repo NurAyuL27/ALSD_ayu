@@ -5,11 +5,11 @@ public class PraktikumBola {
         public double jariJari;
         
         double hitungLuaspermukaan() {
-            return (4 * 3.14 * Math.pow(jariJari, 2));
+            return 4 * 3.14 * jariJari * jariJari;
         }
 
         double volume() {
-            return 3.14 * Math.pow(jariJari, 3) * (4 / 3);
+            return (4 / 3) * 3.14 * (jariJari * jariJari * jariJari);
         }
     }
 }
