@@ -1,9 +1,7 @@
 ## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 4
 
 <p align="center"> 
-<img src="logo polinema.png" width="300px">
-
-
+![alt text](<logo polinema.png>)
  <p align="center">  Nama : Nur Ayu Lailatul Azizah
  <p align="center">  Kelas : TI 1 H
  <p align="center">  NIM : 2341720044
