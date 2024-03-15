@@ -1,4 +1,4 @@
-package pt_2;
+package minggu2;
 public class DragonMain {
     public static void main(String[] args) {
 

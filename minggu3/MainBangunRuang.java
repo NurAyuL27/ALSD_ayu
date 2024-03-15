@@ -1,8 +1,9 @@
-package pt_3;
+package minggu3;
 import java.util.Scanner;
-import pt_3.PraktikumBola.Bola;
-import pt_3.PraktikumKerucut.Kerucut;
-import pt_3.PraktikumLimas.Limas;
+
+import minggu3.PraktikumBola.Bola;
+import minggu3.PraktikumKerucut.Kerucut;
+import minggu3.PraktikumLimas.Limas;
 public class MainBangunRuang {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

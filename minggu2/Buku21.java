@@ -1,4 +1,4 @@
-package pt_2;
+package minggu2;
 public class Buku21 {
    String judul, pengarang;
    int halaman, stok, harga;

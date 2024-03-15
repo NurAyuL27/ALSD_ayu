@@ -1,4 +1,4 @@
-package pt_3;
+package minggu3;
 import java.util.Scanner;
 public class PraktikumLimas {
     public static class Limas {

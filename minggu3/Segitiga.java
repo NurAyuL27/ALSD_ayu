@@ -1,4 +1,4 @@
-package pt_3;
+package minggu3;
 import java.lang.Math;
 public class Segitiga {
     public int alas;

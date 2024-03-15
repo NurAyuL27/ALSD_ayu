@@ -1,4 +1,4 @@
-package pt_2;
+package minggu2;
 public class BukuMain21 {
     public static void main(String[] args) {
         
