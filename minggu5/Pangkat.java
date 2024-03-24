@@ -5,11 +5,6 @@ import java.util.Scanner;
 public class Pangkat {
     public int nilai, pangkat;
 
-    public Pangkat(int nilai, int pangkat) {
-        this.nilai = nilai;
-        this.pangkat = pangkat;
-    }
-
     int pangkatBF(int a, int n) {
         int hasil = 1;
         for(int i = 0; i < n; i++) {
@@ -33,7 +28,6 @@ public class Pangkat {
     public static class MainPangkat {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    boolean running = true;
 
     System.out.println("==============================");
     System.out.println("Menu: ");
@@ -43,34 +37,40 @@ public class Pangkat {
     System.out.println("==============================");
     int pilihan = sc.nextInt();
 
+    System.out.println("==============================");
+    System.out.println("Masukkan jumlah elemen yang dihitung: ");
+    int elemen = sc.nextInt();
+
+    Pangkat[] png = new Pangkat[elemen];
+    for(int i=0; i < elemen; i++) {
+        png[i] = new Pangkat();
+        System.out.println("Masukkan nilai yang dipangkatkan: ");
+        png[i].nilai = sc.nextInt();
+        System.out.println("Masukkan nilai pemangkat: ");
+        png[i].pangkat = sc.nextInt();
+    }
+
+
     switch (pilihan) {
         case 1:
-            System.out.println("Masukkan nilai yang akan dipangkatkan: ");
-            int nilaiBF = sc.nextInt();
-            System.out.println("Masukkan nilai pemangkat: ");
-            int pangkatBF = sc.nextInt();
-            Pangkat pngktBF = new Pangkat(nilaiBF, pangkatBF);
-            System.out.println("Hasil pangkat menggunakan Brute Force: " + pngktBF.pangkatBF(nilaiBF, pangkatBF));
-                break;
+            System.out.println("HASIL PANGKAT - BRUTE FORCE");
+            for(int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat+ " adalah " + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+        }
+            break;
     
         case 2:
-            System.out.println("Masukkan nilai yang akan dipangkatkan: ");
-            int nilaiDC = sc.nextInt();
-            System.out.println("Masukkan nilai pemangkat: ");
-            int pangkatDC = sc.nextInt();
-            Pangkat pngktDC = new Pangkat(nilaiDC, pangkatDC);
-            System.out.println("Hasil pangkat menggunakan Divide and Condquer: " + pngktDC.pangkatDC(nilaiDC, pangkatDC));
-                break;
-
-        case 3:
-            running = false;
-            System.out.println("Program dihentikan");
+            System.out.println("HASIL PANGKAT - DIVINE AND CONQUER");
+            for(int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat+ " adalah " + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+        }
             break;
 
-    default:
-    System.out.println("Pilihan tidak valid.");
-    break;
-            }
+        default:
+            break;
+    }
+    
+    
         }
     }
 }

@@ -74,7 +74,7 @@ public class Faktorial {
 
 - Verifikasi Hasil Percobaan
 
-![alt text](<Screenshot 2024-03-24 121640.png>)
+![alt text](faktorial.png)
 
 - Pertanyaan
 1. Pada base line Algoritma Divide Conquer untuk melakukan pencarian nilai faktorial, jelaskan
@@ -153,7 +153,7 @@ public class Pangkat {
 
 - Verifikasi Hasil Percobaan
 
-![alt text](<Screenshot 2024-03-24 122320.png>)
+![alt text](pangkat.png)
 
 - Pertanyaan
 1. Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()!
@@ -209,7 +209,7 @@ public class Pangkat {
 
     Pangkat[] png = new Pangkat[elemen];
     for(int i=0; i < elemen; i++) {
-        System.out.println("Masukkan nilai yang akan dipangkatkan: ");
+        System.out.println("Masukkan nilai yang dipangkatkan: ");
         int nilai = sc.nextInt();
         System.out.println("Masukkan nilai pemangkat: ");
         int pangkat = sc.nextInt();
@@ -236,11 +236,6 @@ import java.util.Scanner;
 
 public class Pangkat {
     public int nilai, pangkat;
-
-    public Pangkat(int nilai, int pangkat) {
-        this.nilai = nilai;
-        this.pangkat = pangkat;
-    }
 
     int pangkatBF(int a, int n) {
         int hasil = 1;
@@ -270,34 +265,50 @@ public class Pangkat {
     System.out.println("Menu: ");
     System.out.println("1. Pangkat Brute Force");
     System.out.println("2. Pangkat Divide and conquer");
+    System.out.println("Keluar");
     System.out.println("==============================");
     int pilihan = sc.nextInt();
 
+    System.out.println("==============================");
+    System.out.println("Masukkan jumlah elemen yang dihitung: ");
+    int elemen = sc.nextInt();
+
+    Pangkat[] png = new Pangkat[elemen];
+    for(int i=0; i < elemen; i++) {
+        png[i] = new Pangkat();
+        System.out.println("Masukkan nilai yang dipangkatkan: ");
+        png[i].nilai = sc.nextInt();
+        System.out.println("Masukkan nilai pemangkat: ");
+        png[i].pangkat = sc.nextInt();
+    }
+
+
     switch (pilihan) {
         case 1:
-            System.out.println("Masukkan nilai yang akan dipangkatkan: ");
-            int nilaiBF = sc.nextInt();
-            System.out.println("Masukkan nilai pemangkat: ");
-            int pangkatBF = sc.nextInt();
-            Pangkat pngktBF = new Pangkat(nilaiBF, pangkatBF);
-            System.out.println("Hasil pangkat menggunakan Brute Force: " + pngktBF.pangkatBF(nilaiBF, pangkatBF));
-                break;
+            System.out.println("HASIL PANGKAT - BRUTE FORCE");
+            for(int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat+ " adalah " + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+        }
+            break;
     
         case 2:
-            System.out.println("Masukkan nilai yang akan dipangkatkan: ");
-            int nilaiDC = sc.nextInt();
-            System.out.println("Masukkan nilai pemangkat: ");
-            int pangkatDC = sc.nextInt();
-            Pangkat pngktDC = new Pangkat(nilaiDC, pangkatDC);
-            System.out.println("Hasil pangkat menggunakan Divide and Condquer: " + pngktDC.pangkatDC(nilaiDC, pangkatDC));
-                break;
-    default:
-    System.out.println("Pilihan tidak valid.");
-    break;
-            }
+            System.out.println("HASIL PANGKAT - DIVINE AND CONQUER");
+            for(int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat+ " adalah " + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+        }
+            break;
+
+        default:
+            break;
+    }
+    
+    
         }
     }
 }
+
+![alt text](<modifikasi pangkat.png>)
+
 
 
 
@@ -367,7 +378,7 @@ public class Sum {
 
 - Verifikasi Hasil Percobaan
   
-![alt text](<Screenshot 2024-03-24 122508.png>)  
+![alt text](sum.png)
 
 - Pertanyaan
 1. Mengapa terdapat formulasi return value berikut?Jelaskan!
@@ -378,8 +389,79 @@ perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buk
 dengan program!
 
 - jawaban
-1. 
+1. return value return lsum + rsum + arr[mid]; digunakan dalam algoritma Divide and Conquer untuk menghitung total keuntungan dari seluruh bulan. Hal ini karena algoritma Divide and Conquer membagi masalah menjadi submasalah yang lebih kecil, menyelesaikan setiap submasalah secara terpisah, dan kemudian menggabungkan solusi dari setiap submasalah menjadi solusi untuk masalah aslinya.
+2. Variabel mid digunakan dalam metode totalDC() karena algoritma Divide and Conquer membagi masalah menjadi dua bagian yang lebih kecil secara rekursif, dan mid adalah indeks yang digunakan untuk membagi rentang data menjadi dua bagian yang seimbang.
+3. 
 
+package minggu5;
+
+import java.util.Scanner;
+
+public class Sum {
+    static class Perusahaan {
+        int jumlahBulan;
+        double keuntungan[];
+
+        Perusahaan(int jumlahBulan) {
+            this.jumlahBulan = jumlahBulan;
+            this.keuntungan = new double[jumlahBulan];
+        }
+    }
+
+    static double totalKeuntunganBF(Perusahaan perusahaan) {
+        double totalKeuntungan = 0;
+        for (double keuntunganBulan : perusahaan.keuntungan) {
+            totalKeuntungan += keuntunganBulan;
+        }
+        return totalKeuntungan;
+    }
+
+    static double totalKeuntunganDC(double[] keuntungan, int start, int end) {
+        if (start == end) {
+            return keuntungan[start];
+        } else {
+            int mid = (start + end) / 2;
+            double leftTotal = totalKeuntunganDC(keuntungan, start, mid);
+            double rightTotal = totalKeuntunganDC(keuntungan, mid + 1, end);
+            return leftTotal + rightTotal;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int jumlahPerusahaan = sc.nextInt();
+        Perusahaan[] perusahaan = new Perusahaan[jumlahPerusahaan];
+
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            System.out.println("Perusahaan ke-" + (i + 1));
+            System.out.print("Masukkan jumlah bulan: ");
+            int bulan = sc.nextInt();
+            perusahaan[i] = new Perusahaan(bulan);
+            for (int j = 0; j < bulan; j++) {
+                System.out.print("Masukkan keuntungan bulan ke-" + (j + 1) + ": ");
+                perusahaan[i].keuntungan[j] = sc.nextDouble();
+            }
+        }
+
+        System.out.println("============================================================");
+        System.out.println("Total Keuntungan (Brute Force):");
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            double totalKeuntunganBF = totalKeuntunganBF(perusahaan[i]);
+            System.out.println("Total keuntungan perusahaan ke-" + (i + 1) + " adalah: " + totalKeuntunganBF);
+        }
+
+        System.out.println("============================================================");
+        System.out.println("Total Keuntungan (Divide and Conquer):");
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            double totalKeuntunganDC = totalKeuntunganDC(perusahaan[i].keuntungan, 0, perusahaan[i].jumlahBulan - 1);
+            System.out.println("Total keuntungan perusahaan ke-" + (i + 1) + " adalah: " + totalKeuntunganDC);
+        }
+    }
+}
+
+![alt text](<modifikasi sum.png>)
 
 
 #### 2.4 Latihan Praktikum
@@ -450,7 +532,7 @@ public class Showroom {
 
 - Hasil Percobaan
 
-![alt text](<Screenshot 2024-03-24 122548.png>)
+![alt text](showroom.png)
 
 
 

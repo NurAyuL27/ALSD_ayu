@@ -3,56 +3,65 @@ package minggu5;
 import java.util.Scanner;
 
 public class Sum {
-    int elemen;
-    double keuntungan[], total;
+    static class Perusahaan {
+        int jumlahBulan;
+        double keuntungan[];
 
-    Sum(int elemen) {
-        this.elemen = elemen;
-        this.keuntungan = new double[elemen];
-        this.total = 0;
-    }
-
-    double totalBF(double arr[]) {
-        for(int i = 0; i < elemen; i++) {
-            total = total + arr[i];
+        Perusahaan(int jumlahBulan) {
+            this.jumlahBulan = jumlahBulan;
+            this.keuntungan = new double[jumlahBulan];
         }
-        return total;
     }
 
-    double totalDC(double arr[], int l, int r) {
-        if(l == r) {
-            return arr[l];
-        } else if(l < r) {
-            int mid = (l + r) / 2;
-            double lsum = totalDC(arr, l, mid - 1);
-            double rsum = totalDC(arr, mid + 1, r);
-            return lsum + rsum + arr[mid];
+    static double totalKeuntunganBF(Perusahaan perusahaan) {
+        double totalKeuntungan = 0;
+        for (double keuntunganBulan : perusahaan.keuntungan) {
+            totalKeuntungan += keuntunganBulan;
         }
-        return 0;
+        return totalKeuntungan;
     }
 
-    public static class MainSum {
+    static double totalKeuntunganDC(double[] keuntungan, int start, int end) {
+        if (start == end) {
+            return keuntungan[start];
+        } else {
+            int mid = (start + end) / 2;
+            double leftTotal = totalKeuntunganDC(keuntungan, start, mid);
+            double rightTotal = totalKeuntunganDC(keuntungan, mid + 1, end);
+            return leftTotal + rightTotal;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("================================");
-        System.out.println("Program Menghitung Keuntungan Total (Satuan Juta, Misal 5,9)");
-        System.out.print("Masukkan jumlah bulan: ");
-        int elm = sc.nextInt();
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int jumlahPerusahaan = sc.nextInt();
+        Perusahaan[] perusahaan = new Perusahaan[jumlahPerusahaan];
 
-        Sum sm = new Sum(elm);
-        System.out.println("============================================================");
-        for(int i = 0; i < sm.elemen; i++) {
-            System.out.print("Masukkan untung bulan ke - " + (i + 1) + " = ");
-            sm.keuntungan[i] = sc.nextDouble();
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            System.out.println("Perusahaan ke-" + (i + 1));
+            System.out.print("Masukkan jumlah bulan: ");
+            int bulan = sc.nextInt();
+            perusahaan[i] = new Perusahaan(bulan);
+            for (int j = 0; j < bulan; j++) {
+                System.out.print("Masukkan keuntungan bulan ke-" + (j + 1) + ": ");
+                perusahaan[i].keuntungan[j] = sc.nextDouble();
+            }
         }
 
         System.out.println("============================================================");
-        System.out.println("Algoritma Brute Force");
-        System.out.println("Total Keuntungan Perubahan selama " + sm.elemen + " bulan adalah = " + sm.totalBF(sm.keuntungan));
+        System.out.println("Total Keuntungan (Brute Force):");
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            double totalKeuntunganBF = totalKeuntunganBF(perusahaan[i]);
+            System.out.println("Total keuntungan perusahaan ke-" + (i + 1) + " adalah: " + totalKeuntunganBF);
+        }
+
         System.out.println("============================================================");
-        System.out.println("Algoritma Divide Conquer");
-        System.out.println("Total keuntungan perusahaan salama " + sm.elemen + " bulan adalah = " + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
+        System.out.println("Total Keuntungan (Divide and Conquer):");
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            double totalKeuntunganDC = totalKeuntunganDC(perusahaan[i].keuntungan, 0, perusahaan[i].jumlahBulan - 1);
+            System.out.println("Total keuntungan perusahaan ke-" + (i + 1) + " adalah: " + totalKeuntunganDC);
         }
     }
 }
