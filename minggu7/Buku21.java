@@ -63,7 +63,7 @@ public class Buku21 {
             else if (compareResult < 0)
                     return FindBinarySearch(cari, mid + 1, right);
             else 
-                return FindBinarySearch(cari, left, mid + 1);
+                return FindBinarySearch(cari, left, mid - 1);
             }
             return -1;
         }
@@ -107,10 +107,12 @@ public class Buku21 {
                     String judulBuku = s1.nextLine();
                     System.out.print("Tahun terbit  : ");
                     int tahunTerbit = s.nextInt();
+                    s.nextLine();
                     System.out.print("Pengarang     : ");
                     String pengarang = s1.nextLine();
                     System.out.print("Stock         : ");
                     int stock = s.nextInt();
+                    s.nextLine();
 
                     Buku21 m = new Buku21(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
                     data.tambah(m);

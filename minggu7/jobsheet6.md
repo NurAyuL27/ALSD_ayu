@@ -47,7 +47,7 @@ public class Buku21 {
         System.out.println("Stock           : " + stock);
     }
 
-    public static class PencarianBuku05 {
+    public static class PencarianBuku21 {
         Buku21 listBk[] = new Buku21[5];
         int idx;
 
@@ -90,7 +90,7 @@ public class Buku21 {
                 Scanner s = new Scanner(System.in);
                 Scanner s1 = new Scanner(System.in);
 
-                PencarianBuku05 data = new PencarianBuku05();
+                PencarianBuku21 data = new PencarianBuku21();
                 int jumBuku = 5;
 
                 System.out.println("---------------------------------------------------------");
@@ -164,7 +164,7 @@ public class Buku21 {
         System.out.println("Stock           : " + stock);
     }
 
-    public static class PencarianBuku05 {
+    public static class PencarianBuku21 {
         Buku21 listBk[] = new Buku21[5];
         int idx;
 
@@ -220,7 +220,7 @@ public class Buku21 {
                 Scanner s = new Scanner(System.in);
                 Scanner s1 = new Scanner(System.in);
 
-                PencarianBuku05 data = new PencarianBuku05();
+                PencarianBuku21 data = new PencarianBuku21();
                 int jumBuku = 5;
 
                 System.out.println("---------------------------------------------------------");
@@ -303,7 +303,7 @@ public class Buku21 {
         System.out.println("Stock           : " + stock);
     }
 
-    public static class PencarianBuku05 {
+    public static class PencarianBuku21 {
         Buku21 listBk[] = new Buku21[5];
         int idx;
 
@@ -371,7 +371,7 @@ public class Buku21 {
                 Scanner s = new Scanner(System.in);
                 Scanner s1 = new Scanner(System.in);
 
-                PencarianBuku05 data = new PencarianBuku05();
+                PencarianBuku21 data = new PencarianBuku21();
                 int jumBuku = 5;
 
                 System.out.println("---------------------------------------------------------");
