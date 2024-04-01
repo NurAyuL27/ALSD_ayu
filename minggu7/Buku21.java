@@ -49,11 +49,23 @@ public class Buku21 {
             int posisi = -1;
             for (int j = 0; j < listBk.length; j++) {
                 if (listBk[j].kodeBuku == cari) {
-                    posisi = j;
+                   posisi = j;
                     break;
                 }
             }
             return posisi;
+        }
+
+        public int FindBinarySearch(int cari, int left, int right) {
+            if (right >= left) {
+                int mid = left + (right - left) / 2;
+                if (listBk[mid].kodeBuku == cari) 
+                    return (mid);
+                if (listBk[mid].kodeBuku > cari) 
+                    return FindBinarySearch(cari, left, mid - 1);
+                return FindBinarySearch(cari, mid + 1, right);
+            }
+            return -1;
         }
 
         public void TampilPosisi(int x, int pos) {
@@ -113,8 +125,14 @@ public class Buku21 {
                 System.out.println("Masukkan kode buku yang dicari");
                 System.out.print("Kode buku : ");
                 int cari = s.nextInt();
-                System.out.println("Menggunakan sequential search");
+                System.out.println("=========================================================");
+                System.out.println("Menggunakan Sequential Search");
                 int posisi = data.FindSeqSearch(cari);
+                data.TampilPosisi(cari, posisi);
+                data.TampilData(cari, posisi);
+                System.out.println("=========================================================");
+                System.out.println("Menggunakan binary search");
+                posisi = data.FindBinarySearch(cari, 0, jumBuku - 1);
                 data.TampilPosisi(cari, posisi);
                 data.TampilData(cari, posisi);
             }

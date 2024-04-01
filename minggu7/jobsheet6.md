@@ -12,13 +12,13 @@
 <center>E-mail: Polinema.ac.id
 
 ## <center> JOBSHEET V
-## <center> SORTING (BUBBLE, SELECTION, DAN INSERTION SORT)
+## <center> SORTING (BUBBLE, SELECTION, DAN INSERTION SORT) 
 
 #### 2.1 Percobaan 1: Searching / Pencarian Menggunakan Agoritma Sequential Search
 
 
 - Hasil Program pencarian
-
+``` java
 package minggu7;
 
 import java.util.Scanner;
@@ -129,7 +129,7 @@ public class Buku21 {
         
     }
 }
-
+```
 - Verifikasi Hasil Pencarian
 
 
