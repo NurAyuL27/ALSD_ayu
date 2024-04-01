@@ -1,6 +1,5 @@
-## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 5
+## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 6
 
-<p align="center"> 
 <img src="logo polinema.png" width="300px">
 
  <p align="center">  Nama : Nur Ayu Lailatul Azizah
@@ -11,8 +10,8 @@
 <center>Phone: (0341) 404424,404425
 <center>E-mail: Polinema.ac.id
 
-## <center> JOBSHEET V
-## <center> SORTING (BUBBLE, SELECTION, DAN INSERTION SORT) 
+## <center> JOBSHEET VI
+## <center> SEARCHING
 
 #### 2.1 Percobaan 1: Searching / Pencarian Menggunakan Agoritma Sequential Search
 
@@ -135,7 +134,7 @@ public class Buku21 {
 
 
 - Hasil Program 
-
+``` java
 package minggu7;
 
 import java.util.Scanner;
@@ -260,7 +259,7 @@ public class Buku21 {
         
     }
 }
-
+```
 - Verifikasi Hasil Percobaan
 
 
