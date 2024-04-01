@@ -1,5 +1,6 @@
 ## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 6
 
+<p align="center"> 
 <img src="logo polinema.png" width="300px">
 
  <p align="center">  Nama : Nur Ayu Lailatul Azizah
