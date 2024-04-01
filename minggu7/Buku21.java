@@ -3,13 +3,13 @@ package minggu7;
 import java.util.Scanner;
 
 public class Buku21 {
-    String kodeBuku;
+    int kodeBuku;
     String judulBuku;
     int tahunTerbit;
     String pengarang;
     int stock;
     
-    public Buku21(String kodeBuku, String judulBuku, int tahunTerbit, String pengarang, int stock) {
+    public Buku21(int kodeBuku, String judulBuku, int tahunTerbit, String pengarang, int stock) {
         this.kodeBuku = kodeBuku;
         this.judulBuku = judulBuku;
         this.tahunTerbit = tahunTerbit;
@@ -45,30 +45,18 @@ public class Buku21 {
             }
         }
 
-        public int FindSeqSequentialSearch(String cari) {
+        public int FindSeqSearch(int cari) {
+            int posisi = -1;
             for (int j = 0; j < listBk.length; j++) {
-                if (listBk[j].kodeBuku.equals(cari)) {
-                   return j;
+                if (listBk[j].kodeBuku == cari) {
+                    posisi = j;
+                    break;
                 }
             }
-            return -1;
+            return posisi;
         }
 
-        public int FindBinarySearch(String cari, int left, int right) {
-            if (right >= left) {
-                int mid = left + (right - left) / 2;
-                int compareResult = listBk[mid].kodeBuku.compareTo(cari);
-                if (compareResult == 0) 
-                    return mid;
-            else if (compareResult < 0)
-                    return FindBinarySearch(cari, mid + 1, right);
-            else 
-                return FindBinarySearch(cari, left, mid - 1);
-            }
-            return -1;
-        }
-
-        public void TampilPosisi(String x, int pos) {
+        public void TampilPosisi(int x, int pos) {
             if (pos != -1) {
                 System.out.println("Data : " + x + " ditemukan pada indeks " + pos);
             } else {
@@ -76,7 +64,7 @@ public class Buku21 {
             }
         }
 
-        public void TampilData(String x, int pos) {
+        public void TampilData(int x, int pos) {
             if (pos != -1) {
                 System.out.println("Kode buku       : " + x);
                 System.out.println("Judul           : " + listBk[pos].judulBuku);
@@ -102,17 +90,15 @@ public class Buku21 {
                 for (int i = 0; i < jumBuku; i++) {
                     System.out.println("---------------------------------------------------------");
                     System.out.print("Kode buku     : ");
-                    String kodeBuku = s.nextLine();
+                    int kodeBuku = s.nextInt();
                     System.out.print("Judul buku    : ");
                     String judulBuku = s1.nextLine();
                     System.out.print("Tahun terbit  : ");
                     int tahunTerbit = s.nextInt();
-                    s.nextLine();
                     System.out.print("Pengarang     : ");
                     String pengarang = s1.nextLine();
                     System.out.print("Stock         : ");
                     int stock = s.nextInt();
-                    s.nextLine();
 
                     Buku21 m = new Buku21(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
                     data.tambah(m);
@@ -126,15 +112,9 @@ public class Buku21 {
                 System.out.println("Pencarian data");
                 System.out.println("Masukkan kode buku yang dicari");
                 System.out.print("Kode buku : ");
-                String cari = s.nextLine();
-                System.out.println("=========================================================");
-                System.out.println("Menggunakan Sequential Search");
-                int posisi = data.FindSeqSequentialSearch(cari);
-                data.TampilPosisi(cari, posisi);
-                data.TampilData(cari, posisi);
-                System.out.println("=========================================================");
-                System.out.println("Menggunakan binary search");
-                posisi = data.FindBinarySearch(cari, 0, jumBuku - 1);
+                int cari = s.nextInt();
+                System.out.println("Menggunakan sequential search");
+                int posisi = data.FindSeqSearch(cari);
                 data.TampilPosisi(cari, posisi);
                 data.TampilData(cari, posisi);
             }
