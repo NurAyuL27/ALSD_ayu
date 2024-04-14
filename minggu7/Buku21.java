@@ -45,6 +45,15 @@ public class Buku21 {
             }
         }
 
+        public Buku21 FindBuku(int cari) {
+            for (int j = 0; j < listBk.length; j++) {
+                if (listBk[j].kodeBuku == cari) {
+                    return listBk[j];
+                    }
+                }
+            return null;
+        }
+
         public int FindSeqSearch(int cari) {
             int posisi = -1;
             for (int j = 0; j < listBk.length; j++) {
@@ -61,7 +70,7 @@ public class Buku21 {
                 int mid = left + (right - left) / 2;
                 if (listBk[mid].kodeBuku == cari) 
                     return (mid);
-                if (listBk[mid].kodeBuku > cari) 
+                if (listBk[mid].kodeBuku < cari) 
                     return FindBinarySearch(cari, left, mid - 1);
                 return FindBinarySearch(cari, mid + 1, right);
             }
