@@ -1,2 +1,2 @@
 Hasil Program nya adalah
-![alt text](<Screenshot 2023-11-20 205104.png>)
+![alt text](<Screenshot 2024-04-22 110323.png>)
