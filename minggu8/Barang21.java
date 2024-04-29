@@ -127,7 +127,5 @@ public class Barang21 {
                 return data;
             }
         }
-
-
     }
 }
