@@ -592,7 +592,21 @@ public class Postfix21 {
 
 -Jawaban
 1. Beberapa return value yang sama karena operator operator tsb memiliki prioritas yang sama dalam aturan presedensi operator matematika. dan jika case pada setiap return diubah menjadi berbeda beda, maka urutan operator memiliki pengaruh berbeda dalam konversi menjadi postfix
-2. p
+2. - membuat string kosong p yang akan menyimpan ekspresi postfix yang dihasilkan.
+   - Menginisialisasi sebuah stack dengan satu elemen pertama berisi kurung buka (.
+   - iterasi melalui setiap karakter dalam ekspresi infix Q
+   - Untuk setiap karakter c dalam ekspresi infix:
+        - Jika c adalah operand (angka, huruf, spasi, atau titik), tambahkan c ke dalam string p.
+        - Jika c adalah kurung buka (, dorong karakter tersebut ke dalam stack.
+        - Jika c adalah kurung tutup ):
+            - Keluarkan dan tambahkan semua operator dari stack ke dalam string p sampai ditemukan kurung buka.
+            - Keluarkan kurung buka dari stack.
+        - Jika c adalah operator (+, -, *, /, %, ^):
+            - Bandingkan prioritas operator c dengan operator teratas di stack.
+            - Jika prioritas operator di stack lebih besar atau sama dengan prioritas operator c, keluarkan operator dari stack dan tambahkan ke dalam string p.
+            - Ulangi proses ini hingga tidak terpenuhi kondisi prioritas.
+            - Setelah itu, dorong operator c ke dalam stack.
+    - Setelah semua karakter dievaluasi, kembalikan string p yang berisi ekspresi postfix. 
 3. Digunakan untuk mengambil karakter pada posisi i dari string Q dan menyimpan kedalam variabel c.
 
 #### 2.4 Latihan Praktikum
