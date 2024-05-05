@@ -58,6 +58,14 @@ public class Nasabah {
                 System.out.println("Queue masih kosong");
             }
         }
+
+        public void peekRear() {
+            if (!IsEmpty()) {
+                System.out.println("Elemen terbelakang: " + data[rear].norek + " " + data[rear].nama + " " + data[rear].alamat + " " + data[rear].umur + " " + data[rear].saldo);
+            } else {
+                System.out.println("Queue masih kosong");
+            }
+        }
     
         public void print() {
             if (IsEmpty()) {
@@ -128,6 +136,7 @@ public class Nasabah {
         System.out.println("2. Antrian keluar");
         System.out.println("3. Cek Antrian terdepan");
         System.out.println("4. Cek Semua Antrian");
+        System.out.println("5. Cek Antrian paling belakang");
         System.out.println("----------------------------------");
     }
 
@@ -170,8 +179,11 @@ public class Nasabah {
                     antri.peek();
                     break;
                 case 4:
-                antri.print();
-                break;
+                    antri.print();
+                    break;
+                case 5:
+                    antri.peekRear();
+                    break;
             }
         }while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4);
     }
