@@ -61,21 +61,26 @@ public class Mahasiswa {
             }
         }
     
-        void insertAfter(int key, int urutan, int nim, String nama){
+        void insertAfter(int index, int urutan, int nim, String nama){
             Node ndinput = new Node(urutan, nim, nama, null);
-            Node temp = head;
-            while (temp != null) {
-                if(temp.urutan == key) {
-                    ndinput.next = temp.next;
+            if (index == 0) {
+                addFirst(urutan, nim, nama);
+            } else {
+                Node temp = head;
+                for (int i = 0; i < index -1; i++) {
+                    temp = temp.next;
+                }
+                if (temp == null) {
+                    System.out.println("Index melebihi batas");
+                    return;
+                    }
+                      ndinput.next = temp.next;
                     temp.next = ndinput;
                     if(ndinput.next == null) { 
                         tail = ndinput;
                     }
-                    break;
                 }
-                temp = temp.next;
-            } while(temp != null);
-        }
+            }
     
         void insertAt(int index, int urutan, int nim, String nama) {
             Node ndinput = new Node(urutan, nim, nama, null);
