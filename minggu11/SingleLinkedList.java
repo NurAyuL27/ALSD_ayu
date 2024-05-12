@@ -9,7 +9,7 @@ public class SingleLinkedList {
     void print() { 
         if(!isEmpty()) {
             Node tmp = head;
-            System.out.print("Isi Linked List");
+            System.out.print("Isi Linked List:\t");
             while(tmp != null){
                 System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
@@ -66,7 +66,7 @@ public class SingleLinkedList {
             addFirst(input);
         } else{
             Node temp = head;
-            for(int i=0;i < index; i++){
+            for(int i=0;i < index -1; i++){
                 temp = temp.next;
             }
             temp.next= new Node (input, temp.next);
