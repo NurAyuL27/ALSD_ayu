@@ -1,5 +1,16 @@
 import java.util.Scanner;
 public class SingleLinkedList {
+
+    public class Node {
+        int data;
+        Node next;
+    
+        public Node(int data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+    }
+    
     Node head, tail;
 
     boolean isEmpty(){
