@@ -160,24 +160,37 @@ public class DoubleLinkedList {
 
 ![alt text](<Screenshot 2024-05-13 123235.png>)
 
-- Pertanyaan
+- Pertanyaan Percobaan
 1. Jelaskan perbedaan antara single linked list dengan double linked lists!
-single linkedlist hanya memiliki tautan satu arah, setiap node terdiri dari dua bagian yaotu data dan pointer dan tidak bisa kembali ke node sebelumnya.
-sedangkann double linked list setiap elemen memiliki dua tautan yaitu mengarah ke elemen berikutnya dan mengarah ke elemen sebelumnya, setiap node terdiri dari tiga bagian yaitu data pointer ke node berikutnya dan pointer ke node sebelumnya dan bisa di akses dari awal ke akhir atau sebaliknya.
+- single linkedlist hanya memiliki tautan satu arah, setiap node terdiri dari dua bagian yaotu data dan pointer dan tidak bisa kembali ke node sebelumnya.
+- sedangkann double linked list setiap elemen memiliki dua tautan yaitu mengarah ke elemen berikutnya dan mengarah ke elemen sebelumnya, setiap node terdiri dari tiga bagian yaitu data pointer ke node berikutnya dan pointer ke node sebelumnya dan bisa di akses dari awal ke akhir atau sebaliknya.
 2. Perhatikan class Node, di dalamnya terdapat atribut next dan prev. Untuk apakah atribut tersebut?
-3. Perhatikan konstruktor pada class DoubleLinkedLists. Apa kegunaan inisialisasi atribut head dan
-size seperti pada gambar berikut ini?
+- atribut prev digunakan untuk menyimpan referensi ke node sebelumnya dalam linkedlist. Sedangkan atribut next digunakan untuk menyimpan referensi ke node berikutnya dalam linked list.
+3. Perhatikan konstruktor pada class DoubleLinkedLists. Apa kegunaan inisialisasi atribut head dan size seperti pada gambar berikut ini?
+```java
+public DoubleLinkedList() {
+    head = null;
+    size = 0;
+}
+```
+- kegunaan inisialisasi atribut head dan size pada class DoubleLinkedList untuk mengatur kondisi awal dari linked list objek DoubleLinkedList pertama kali dibuat.
 4. Pada method addFirst(), kenapa dalam pembuatan object dari konstruktor class Node prev dianggap sama dengan null?
 Node newNode = new Node(null, item, head);
+- class node prev diinisialisai dengan null karena pada saat menambahkan node baru di awal, node baru tersebut tidak memiliki node sebelumnya, oleh karena itu atribut prev dari node baru di atur ke null.
 5. Perhatikan pada method addFirst(). Apakah arti statement head.prev = newNode ?
+- statement tersebut berfungsi untuk memperbarui referensi prev dari node yang saat ini menjadi head agar menunjuk ke node baru.
 6. Perhatikan isi method addLast(), apa arti dari pembuatan object Node dengan mengisikan parameter prev dengan current, dan next dengan null?
 Node newNode = new Node(current, item, null);
+- Artinya adalah: Parameter prev = current menunjukkan bahwa node baru mengikuti node terakhir yang ada saat ini, sehingga current menjadi node sebelumnya dari node baru. sedangkan Parameter next = null menunjukkan bahwa node bau ini adalah node terakhir dalam list, sehingga tidak ada node berikutnya.
 7. Pada method add(), terdapat potongan kode program sebagai berikut:
+```java
+if (current.prev == null) {
+            Node newNode = new Node (null, item, current);
+            current.prev = newNode;
+            head = newNode;
+```
 jelaskan maksud dari bagian yang ditandai dengan kotak kuning.
-
-- Jawaban 
-1. 
-
+- potongan kode di atas untuk menangani kasus dimana node baru perlu ditambahkan di awal posisi 0 dari linked list.
 
 #### 2.2 Praktikum 2:
 
@@ -392,12 +405,18 @@ public class DoubleLinkedListMain {
 1. Apakah maksud statement berikut pada method removeFirst()?
 head = head.next;
 head.prev = null;
+- statement tersebut memiliki tujuan untuk menghapus node pertama dari linked list dan memperbarui referensi head serta referensi prev dari node baru yang menjadi head.
 2. Bagaimana cara mendeteksi posisi data ada pada bagian akhir pada method removeLast()?
+- Untuk mendeteksinya perlu memeriksa apakah node saat ini adalah node terakhir dalam linked list jika iya maka data berada dibagian akhir, jika tidak lanjutkan iterasi ke node berikutnya.
 3. Jelaskan alasan potongan kode program di bawah ini tidak cocok untuk perintah remove!
+Node tmp = head.next;
+head.next = tmp.next;
+tmp.next.prev=head;
+- alasanyya karena kode tersebut seolah olah menggeser urutan node, mencoba menghapus node kedua dan membuat node ketiga mengambil tempat node kedua, ini tidak menghapus node yang diaksud tetapi mengubah struktur linked list.
 4. Jelaskan fungsi kode program berikut ini pada fungsi remove!
-
-jawaban 
-
+current.prev.next = current.next;
+current.next.prev = current.prev;
+- Fungsinya adalah untuk menghapus node dari linked list dengan mengatur referensi next dan prev dari node sebelumnya dan setelahnya secara tepat, melewati node yang akan dihapus.
 
 ### 2.3 Praktikum 3:
 
@@ -613,11 +632,34 @@ public class DoubleLinkedListsMain {
 #### 2.4 Latihan Praktikum
 
 - ketentuan tugas 1
-Implementasikan ilustrasi Linked List Berikut. Gunakan 4 macam penambahan data yang telah dipelajari sebelumnya untuk menginputkan data.
+. Buat program antrian vaksinasi menggunakan queue berbasis double linked list sesuai ilustrasi
+dan menu di bawah ini! (counter jumlah antrian tersisa di menu cetak(3) dan data orang yang
+telah divaksinasi di menu Hapus Data(2) harus ada)
+Contoh Ilustrasi Program
+Menu Awal dan Penambahan Data
+Cetak Data (Komponen di area merah harus ada)
 
 - Hasil Program
 ``` java  
 ```
 
 - Hasil Percobaan
+
+
+
+- ketentuan tugas 2
+Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked
+lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara
+descending. Class Film wajib diimplementasikan dalam soal ini.
+Contoh Ilustrasi Program
+Menu Awal dan Penambahan Data
+Cetak Data
+Pencarian Data
+
+- Hasil Program
+``` java  
+```
+
+- Hasil Percobaan
+
 
