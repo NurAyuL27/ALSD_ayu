@@ -625,19 +625,33 @@ public class DoubleLinkedListsMain {
 ![alt text](<Screenshot 2024-05-13 184944.png>)
 
 - Pertanyaan 
-1. 
-
-- Jawaban
+1. Jelaskan method size() pada class DoubleLinkedLists!
+- Method size berfungsi untuk mengembalikan jumlah elemen yang ada di dalam linked list. method ini tidak menerima parameter apapun dan mengembalikan nilai integer yang menunjukkan ukuran atau jumlah node yang ada didalam linked lisy tersebut.
+2. Jelaskan cara mengatur indeks pada double linked lists supaya dapat dimulai dari indeks ke1!
+- 
+3. Jelaskan perbedaan karakteristik fungsi Add pada Double Linked Lists dan Single Linked Lists!
+4. Jelaskan perbedaan logika dari kedua kode program di bawah ini!
+a. public boolean isEmpty(){
+        if(size ==0) {
+            return true;
+        } else{
+            return false;
+        }
+    }
+b.     public boolean isEmpty() {
+        return head == null;
+    }
 
 #### 2.4 Latihan Praktikum
 
 - ketentuan tugas 1
-. Buat program antrian vaksinasi menggunakan queue berbasis double linked list sesuai ilustrasi
+Buat program antrian vaksinasi menggunakan queue berbasis double linked list sesuai ilustrasi
 dan menu di bawah ini! (counter jumlah antrian tersisa di menu cetak(3) dan data orang yang
 telah divaksinasi di menu Hapus Data(2) harus ada)
 Contoh Ilustrasi Program
 Menu Awal dan Penambahan Data
 Cetak Data (Komponen di area merah harus ada)
+Hapus Data (Komponen di area merah harus ada)
 
 - Hasil Program
 ``` java  
@@ -648,9 +662,7 @@ Cetak Data (Komponen di area merah harus ada)
 
 
 - ketentuan tugas 2
-Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked
-lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara
-descending. Class Film wajib diimplementasikan dalam soal ini.
+Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara descending. Class Film wajib diimplementasikan dalam soal ini.
 Contoh Ilustrasi Program
 Menu Awal dan Penambahan Data
 Cetak Data
