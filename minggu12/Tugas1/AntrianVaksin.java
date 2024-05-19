@@ -48,12 +48,13 @@ public class AntrianVaksin {
             if (isEmpty()) {
                 throw new Exception("Antrian masih kosong, tidak dapat dihapus!");
             }
-            System.out.println(head.nama + " telah divaksinasi.");
+            System.out.println(head.nama + " telah selesai divaksinasi.");
             head = head.next;
             if (head != null) {
                 head.prev = null;
             }
             size--;
+            print();
         }
 
         public void print() {
@@ -74,14 +75,14 @@ public class AntrianVaksin {
             }
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args) throws Exception{
             Scanner sc = new Scanner(System.in);
             System.out.print("Masukkan kapasitas antrian: ");
             int kapasitas = sc.nextInt();
             System.out.println("\n+++++++++++++++++++++++++++++++++++++++");
             System.out.println("     PENGANTRI VAKSIN EXTRAVAGANZA     ");
             System.out.println("+++++++++++++++++++++++++++++++++++++++");
-            Vaksinasi v = new Vaksinasi(kapasitas);
+            AntrianVaksin v = new AntrianVaksin(kapasitas);
             int pilih;
     
             do {
@@ -90,7 +91,6 @@ public class AntrianVaksin {
                 System.out.println("3. Daftar Penerima Vaksin");
                 System.out.println("4. Keluar");
                 System.out.println("+++++++++++++++++++++++++++++++++++++++");
-                System.out.print("Pilih menu (1/2/3/4): ");
                 pilih = sc.nextInt();
     
                 switch (pilih) {
