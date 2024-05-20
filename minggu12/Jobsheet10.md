@@ -1,4 +1,4 @@
-## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 9
+## <center> LAPORAN HASIL PRAKTIKUM JOBSHEET 10
 
 <p align="center"> 
 <img src="logo polinema.png" width="300px">
@@ -11,8 +11,8 @@
 <center>Phone: (0341) 404424,404425
 <center>E-mail: Polinema.ac.id
 
-## <center> JOBSHEET IX
-## <center> LINKEDLIST
+## <center> JOBSHEET X
+## <center> DOUBLE LINKEDLIST
 
 #### 2.1 Praktikum 1
 
