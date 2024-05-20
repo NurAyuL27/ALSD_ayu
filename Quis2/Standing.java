@@ -31,17 +31,14 @@ public class Standing {
     }
 
     public void addMatch(int matchNumber, String homeTeamName, String awayTeamName, String winnerName) {
-        // Membersihkan dan memformat nama tim
         homeTeamName = homeTeamName.trim();
         awayTeamName = awayTeamName.trim();
         winnerName = winnerName.trim();
-    
-        // Mencari tim-tim yang sesuai
+
         Team homeTeam = findTeam(homeTeamName);
         Team awayTeam = findTeam(awayTeamName);
         Team winner = findTeam(winnerName);
-    
-        // Memeriksa apakah tim-tim ditemukan
+
         if (homeTeam == null) {
             System.out.println("Invalid match data: Home team '" + homeTeamName + "' not found.");
             return;
@@ -54,8 +51,7 @@ public class Standing {
             System.out.println("Invalid match data: Winner team '" + winnerName + "' not found.");
             return;
         }
-    
-        // Membuat pertandingan jika semua tim ditemukan
+
         Match match = new Match(homeTeam, awayTeam, winner);
         Node newNode = new Node(match);
         if (head == null) {
@@ -70,7 +66,6 @@ public class Standing {
     
 
     public void printStandings() {
-        // Sort teams by points, wins, and then name for tie-breaking
         Team[] sortedTeams = teams.clone();
         Arrays.sort(sortedTeams, (t1, t2) -> {
             int pointCompare = Integer.compare(t2.getPoints(), t1.getPoints());
