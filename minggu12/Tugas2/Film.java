@@ -32,7 +32,7 @@ public class Film {
     public void addAwal(int id, String judul, double rate) {
         Node newNode = new Node(null, id, judul, rate, head);
         if (head != null) {
-            head.prev = head;
+            head.prev = newNode;
         }
         head = newNode;
         size++;
@@ -92,7 +92,11 @@ public class Film {
         while (current.next != null) {
             current = current.next;
         }
-        current.prev.next = null;
+        if (current.prev != null) {
+            current.prev.next = null;
+        } else {
+            head = null;
+        }
         size--;
     }
 
@@ -120,20 +124,17 @@ public class Film {
 
     public void print() {
         if (!isEmpty()) {
-            System.out.println("Daftar Film masih kosong");
-            return;
-        }
             Node current = head;
-            System.out.println("---------------------------------------");
-            System.out.println("Daftar Film Layar Lebar");
-            System.out.println("---------------------------------------");
-            System.out.printf("| %-10s | %-30s | %-10.2f |%n", "ID Film.", "Judul Film", "Rating");
             while (current != null) {
-                System.out.printf("| %-10s | %-30s | %-10.2f |%n", current.id, current.judul, current.rate);
+                System.out.println("ID Film: " + current.id);
+                System.out.println("Judul Film: " + current.judul);
+                System.out.println("Rating Film: " + current.rate);
+                System.out.println("-----------------------------------");
                 current = current.next;
             }
-            System.out.println("---------------------------------------");
-            System.out.println("Sisa antrian: " + size);
+        } else {
+            System.out.println("Daftar Film masih kosong");
+        }
     }
 
     public Node searchFilm(int id) {
