@@ -27,11 +27,11 @@ public class Team {
         return gamesPlayed;
     }
 
-    public int getWins() {
+    public int Win() {
         return wins;
     }
 
-    public int getLosses() {
+    public int Los() {
         return losses;
     }
 

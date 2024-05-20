@@ -72,17 +72,19 @@ public class Standing {
             if (pointCompare != 0) {
                 return pointCompare;
             }
-            int winCompare = Integer.compare(t2.getWins(), t1.getWins());
+            int winCompare = Integer.compare(t2.Win(), t1.Win());
             if (winCompare != 0) {
                 return winCompare;
             }
             return t1.getName().compareTo(t2.getName());
         });
-
-        System.out.println(String.format("%-5s %-30s %-10s %-5s %-5s %-5s", "Rank", "Team", "Games", "Wins", "Losses", "Points"));
+        System.out.println("======================================================================");
+        System.out.println(String.format("%-5s %-35s %-10s %-5s %-5s %-5s", "Rank", "Team", "G", "W", "L", "Pts"));
+        System.out.println("======================================================================");
         for (int i = 0; i < sortedTeams.length; i++) {
             Team team = sortedTeams[i];
-            System.out.println(String.format("%-5d %-30s %-10d %-5d %-5d %-5d", i + 1, team.getName(), team.getGamesPlayed(), team.getWins(), team.getLosses(), team.getPoints()));
+            System.out.println(String.format("%-5d %-35s %-10d %-5d %-5d %-5d", i + 1, team.getName(), team.getGamesPlayed(), team.Win(), team.Los(), team.getPoints()));
+            System.out.println("======================================================================");
         }
     }
 
@@ -213,6 +215,9 @@ public class Standing {
         }
 
         while (true) {
+            System.out.println("=================================");
+            System.out.println("     INDONESIA BASKET LEAGUE     ");
+            System.out.println("=================================");
             System.out.println("\nMenu:");
             System.out.println("1. Print Standings");
             System.out.println("2. Print Teams");

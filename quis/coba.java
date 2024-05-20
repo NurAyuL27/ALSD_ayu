@@ -1,26 +1,92 @@
-package quis;
-
-package Pertemuan4;
-
-public class kucing {
-    int pjgkuku;
-public static void main(String[] args) {
-    kucing[] kucingArray = new kucing[3];
-    for (int i = 0; i > 3; i++){
-        kucingArray[i] = new kucing();
-        System.out.println("Masukkan banyak kucing: ");
-        kucingArray[i] = new kucing();
-        System.out.println("bany");
-    }
-
-}    
-}
-
-public class mobil {
-    int jmlBan;
-
-    public static void main(String[] args) {
-        mobil mbl = new mobil();
-    }
-}
-
+{"Dewa United Banten", "Pacific Caesar Surabaya", "Dewa United Banten"},
+{"Kesatria Bengawan Solo", "Bali United Basketball", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Rajawali Medan", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Prawira Harum Bandung", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "RANS Simba Bogor", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Satria Muda Pertamina Jakarta", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Borneo Hornbills", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Amartha Hangtuah Jakarta", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Satya Wacana Salatiga", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Bima Perkasa Jogja", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Tangerang Hawks Basketball Club", "Kesatria Bengawan Solo"},
+{"Kesatria Bengawan Solo", "Pacific Caesar Surabaya", "Kesatria Bengawan Solo"},
+{"Bali United Basketball", "Rajawali Medan", "Bali United Basketball"},
+{"Bali United Basketball", "Prawira Harum Bandung", "Bali United Basketball"},
+{"Bali United Basketball", "RANS Simba Bogor", "Bali United Basketball"},
+{"Bali United Basketball", "Satria Muda Pertamina Jakarta", "Bali United Basketball"},
+{"Bali United Basketball", "Borneo Hornbills", "Bali United Basketball"},
+{"Bali United Basketball", "Amartha Hangtuah Jakarta", "Bali United Basketball"},
+{"Bali United Basketball", "Satya Wacana Salatiga", "Bali United Basketball"},
+{"Bali United Basketball", "Bima Perkasa Jogja", "Bali United Basketball"},
+{"Bali United Basketball", "Tangerang Hawks Basketball Club", "Bali United Basketball"},
+{"Bali United Basketball", "Pacific Caesar Surabaya", "Bali United Basketball"},
+{"Rajawali Medan", "Prawira Harum Bandung", "Rajawali Medan"},
+{"Rajawali Medan", "RANS Simba Bogor", "Rajawali Medan"},
+{"Rajawali Medan", "Satria Muda Pertamina Jakarta", "Rajawali Medan"},
+{"Rajawali Medan", "Borneo Hornbills", "Rajawali Medan"},
+{"Rajawali Medan", "Amartha Hangtuah Jakarta", "Rajawali Medan"},
+{"Rajawali Medan", "Satya Wacana Salatiga", "Rajawali Medan"},
+{"Rajawali Medan", "Bima Perkasa Jogja", "Rajawali Medan"},
+{"Rajawali Medan", "Tangerang Hawks Basketball Club", "Rajawali Medan"},
+{"Rajawali Medan", "Pacific Caesar Surabaya", "Rajawali Medan"},
+{"Prawira Harum Bandung", "RANS Simba Bogor", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Satria Muda Pertamina Jakarta", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Borneo Hornbills", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Amartha Hangtuah Jakarta", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Satya Wacana Salatiga", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Bima Perkasa Jogja", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Tangerang Hawks Basketball Club", "Prawira Harum Bandung"},
+{"Prawira Harum Bandung", "Pacific Caesar Surabaya", "Prawira Harum Bandung"},
+{"RANS Simba Bogor", "Satria Muda Pertamina Jakarta", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Borneo Hornbills", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Amartha Hangtuah Jakarta", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Satya Wacana Salatiga", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Bima Perkasa Jogja", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Tangerang Hawks Basketball Club", "RANS Simba Bogor"},
+{"RANS Simba Bogor", "Pacific Caesar Surabaya", "RANS Simba Bogor"},
+{"Satria Muda Pertamina Jakarta", "Borneo Hornbills", "Satria Muda Pertamina Jakarta"},
+{"Satria Muda Pertamina Jakarta", "Amartha Hangtuah Jakarta", "Satria Muda Pertamina Jakarta"},
+{"Satria Muda Pertamina Jakarta", "Satya Wacana Salatiga", "Satria Muda Pertamina Jakarta"},
+{"Satria Muda Pertamina Jakarta", "Bima Perkasa Jogja", "Satria Muda Pertamina Jakarta"},
+{"Satria Muda Pertamina Jakarta", "Tangerang Hawks Basketball Club", "Satria Muda Pertamina Jakarta"},
+{"Satria Muda Pertamina Jakarta", "Pacific Caesar Surabaya", "Satria Muda Pertamina Jakarta"},
+{"Borneo Hornbills", "Amartha Hangtuah Jakarta", "Borneo Hornbills"},
+{"Borneo Hornbills", "Satya Wacana Salatiga", "Borneo Hornbills"},
+{"Borneo Hornbills", "Bima Perkasa Jogja", "Borneo Hornbills"},
+{"Borneo Hornbills", "Tangerang Hawks Basketball Club", "Borneo Hornbills"},
+{"Borneo Hornbills", "Pacific Caesar Surabaya", "Borneo Hornbills"},
+{"Amartha Hangtuah Jakarta", "Satya Wacana Salatiga", "Amartha Hangtuah Jakarta"},
+{"Amartha Hangtuah Jakarta", "Bima Perkasa Jogja", "Amartha Hangtuah Jakarta"},
+{"Amartha Hangtuah Jakarta", "Tangerang Hawks Basketball Club", "Amartha Hangtuah Jakarta"},
+{"Amartha Hangtuah Jakarta", "Pacific Caesar Surabaya", "Amartha Hangtuah Jakarta"},
+{"Satya Wacana Salatiga", "Bima Perkasa Jogja", "Satya Wacana Salatiga"},
+{"Satya Wacana Salatiga", "Tangerang Hawks Basketball Club", "Satya Wacana Salatiga"},
+{"Satya Wacana Salatiga", "Pacific Caesar Surabaya", "Satya Wacana Salatiga"},
+{"Bima Perkasa Jogja", "Tangerang Hawks Basketball Club", "Bima Perkasa Jogja"},
+{"Bima Perkasa Jogja", "Pacific Caesar Surabaya", "Bima Perkasa Jogja"},
+{"Tangerang Hawks Basketball Club", "Pacific Caesar Surabaya", "Tangerang Hawks Basketball Club"},
+{"Pelita Jaya Jakarta", "Dewa United Banten", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Kesatria Bengawan Solo", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Bali United Basketball", "Bali United Basketball"},
+{"Pelita Jaya Jakarta", "Rajawali Medan", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Prawira Harum Bandung", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "RANS Simba Bogor", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Satria Muda Pertamina Jakarta", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Borneo Hornbills", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Amartha Hangtuah Jakarta", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Satya Wacana Salatiga", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Bima Perkasa Jogja", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Tangerang Hawks Basketball Club", "Pelita Jaya Jakarta"},
+{"Pelita Jaya Jakarta", "Pacific Caesar Surabaya", "Pelita Jaya Jakarta"},
+{"Dewa United Banten", "Kesatria Bengawan Solo", "Dewa United Banten"},
+{"Dewa United Banten", "Bali United Basketball", "Dewa United Banten"},
+{"Dewa United Banten", "Rajawali Medan", "Dewa United Banten"},
+{"Dewa United Banten", "Prawira Harum Bandung", "Dewa United Banten"},
+{"Dewa United Banten", "RANS Simba Bogor", "Dewa United Banten"},
+{"Dewa United Banten", "Satria Muda Pertamina Jakarta", "Dewa United Banten"},
+{"Dewa United Banten", "Borneo Hornbills", "Dewa United Banten"},
+{"Dewa United Banten", "Amartha Hangtuah Jakarta", "Dewa United Banten"},
+{"Dewa United Banten", "Satya Wacana Salatiga", "Dewa United Banten"},
+{"Dewa United Banten", "Bima Perkasa Jogja", "Dewa United Banten"},
+{"Dewa United Banten", "Tangerang Hawks Basketball Club", "Dewa United Banten"},
+{"Dewa United Banten", "Pacific Caesar Surabaya", "Dewa United Banten"}
