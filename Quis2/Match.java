@@ -35,7 +35,6 @@ public class Match {
         return winner;
     }
 
-    @Override
     public String toString() {
         return homeTeam.getName() + " vs " + awayTeam.getName() + " - Winner: " + (winner != null ? winner.getName() : "None");
     }
