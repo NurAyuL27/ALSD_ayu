@@ -329,6 +329,13 @@ public class BinaryTreeArray21 {
 4. Jika suatu node binary tree disimpan dalam array indeks 2, maka di indeks berapakah posisi left child dan rigth child masin-masing?
 5. Apa kegunaan statement int idxLast = 6 pada praktikum 2 percobaan nomor 4?
 
+- Jawaban
+1. Atribut data adalah array yang menyimpan data node pada pohon biner. Atribut idxLast untuk menyimpan indeks dari node terakhir yang berisi data yang valid dalam array data.
+2. Method populateData() memiliki fungsi untuk mengisi data ke dalam struktur data pohon biner yang diimplementasikan menggunakan array.
+3. Method traverseInOrder() memiliki fungsi untuk melakukan traversal in-order pada pohon biner yang diimplementasikan menggunakan array.
+4. Dalam pohon biner yang diimplementasikan menggunakan array, indeks dari node anak kiri (left child) dari node dengan indeks i dapat dihitung dengan rumus 2 * i + 1, sedangkan indeks dari node anak kanan (right child) dari node dengan indeks i dapat dihitung dengan rumus 2 * i + 2.
+5. Pada praktikum 2 percobaan nomor 4 yang diberikan, statement int idxLast = 6; digunakan untuk menunjukkan bahwa pohon biner yang diimplementasikan menggunakan array memiliki data yang valid hingga pada node dengan indeks ke-6.
+
 #### 2.3 Latihan Praktikum
 
 - ketentuan tugas 1
