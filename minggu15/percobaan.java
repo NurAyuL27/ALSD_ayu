@@ -122,9 +122,9 @@ public class percobaan {
                     }
                     totalout = k;
                 }
-            System.out.println("InDegree dari Gedung " + (char) ('A' +asal) + ":" + totalin); 
-            System.out.println("OutDegree dari Gedung " + (char) ('A' + asal) + ":" + totalout);
-            System.out.println("Degree dari Gedung " +(char) ('A' +asal)+":"+ (totalin + totalout));
+            System.out.println("InDegree dari Gedung " + (char) ('A' +asal) + " : " + totalin); 
+            System.out.println("OutDegree dari Gedung " + (char) ('A' + asal) + " : " + totalout);
+            System.out.println("Degree dari Gedung " +(char) ('A' +asal)+" : "+ (totalin + totalout));
             //System.out.println("Degree dari Gedung " + (char) ('A' + asal) + ": " + list[asal].size());
         }
         
@@ -165,44 +165,74 @@ public class percobaan {
             }
             return false;
         }
+
+        public void updateJarak(int asal, int tujuan, int jarak) throws Exception {
+            boolean success = false;
+            Node21 current = list[asal].head;
+            while (current != null) {
+                if (current.data == tujuan) {
+                    current.jarak = jarak;
+                    success = true;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+
+        public void hitungEdge() {
+            int totalEdge = 0;
+            for (int i = 0; i < vertex; i++) { // directed
+                totalEdge += list[i].size();
+            }
+            // for (int i = 0; i < vertex; i++) { // undirected
+            //     totalEdge += list[i].size();
+            // }
+            // totalEdge /= 2;
+            System.out.println("Total edge dalam graf: " + totalEdge);
+        }
     }
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan jumlah vertex: ");
+        System.out.print("Masukkan kapasitas gedung : ");
         int v = sc.nextInt();
         Graph gedung = new Graph(v);
 
         while (true) {
-            System.out.println("Menu:");
-            System.out.println("1. Add Edge");
-            System.out.println("2. Remove Edge");
-            System.out.println("3. Degree");
-            System.out.println("4. Print Graph");
-            System.out.println("5. Cek Edge");
-            System.out.println("6. Exit");
-            System.out.print("Pilih menu: ");
+            System.out.println("\n===========================================");
+            System.out.println("|               GRAF GEDUNG               |");
+            System.out.println("===========================================");
+            System.out.println("| 1. Add Edge           ");
+            System.out.println("| 2. Remove Edge        ");
+            System.out.println("| 3. Degree             ");
+            System.out.println("| 4. Print Graph        ");
+            System.out.println("| 5. Cek Edge           ");
+            System.out.println("| 6. Update Jarak       ");
+            System.out.println("| 7. Hitung Edge        ");
+            System.out.println("| 8. Exit               ");
+            System.out.println("===========================================");
+            System.out.print("Pilih Menu     : ");
             int pilihan = sc.nextInt();
 
             switch (pilihan) {
                 case 1:
-                    System.out.print("Masukkan asal: ");
+                    System.out.print("Masukkan posisi gedung asal   : ");
                     int asal = sc.nextInt();
-                    System.out.print("Masukkan tujuan: ");
+                    System.out.print("Masukkan posisi gedung tujuan : ");
                     int tujuan = sc.nextInt();
-                    System.out.print("Masukkan jarak: ");
+                    System.out.print("Masukkan jarak antar gedung   : ");
                     int jarak = sc.nextInt();
                     gedung.addEdge(asal, tujuan, jarak);
                     break;
                 case 2:
-                    System.out.print("Masukkan asal: ");
+                    System.out.print("Masukkan posisi gedung asal   : ");
                     asal = sc.nextInt();
-                    System.out.print("Masukkan tujuan: ");
+                    System.out.print("Masukkan posisi gedung tujuan : ");
                     tujuan = sc.nextInt();
                     gedung.removeEdge(asal, tujuan);
                     break;
                 case 3:
-                    System.out.print("Masukkan vertex: ");
+                    System.out.print("Masukkan gedung asal          : ");
                     asal = sc.nextInt();
                     gedung.degree(asal);
                     break;
@@ -210,15 +240,27 @@ public class percobaan {
                     gedung.printGraph();
                     break;
                 case 5:
-                    System.out.print("Masukkan asal: ");
+                    System.out.print("Masukkan posisi gedung asal   : ");
                     asal = sc.nextInt();
-                    System.out.print("Masukkan tujuan: ");
+                    System.out.print("Masukkan posisi gedung tujuan : ");
                     tujuan = sc.nextInt();
                     boolean adaEdge = gedung.cekEdge(asal, tujuan);
-                    System.out.println("Edge dari " + asal + " ke " + tujuan + " " + (adaEdge ? "ada" : "tidak ada"));
+                    System.out.println("Gedung " + asal + " dengan " + tujuan + " " + (adaEdge ? "bersampingan" : "tidak bersampingan"));
                     break;
                 case 6:
-                    System.out.println("Terima kasih telah menggunakan program ini.");
+                    System.out.print("Masukkan posisi gedung asal        : ");
+                    asal = sc.nextInt();
+                    System.out.print("Masukkan posisi gedung tujuan      : ");
+                    tujuan = sc.nextInt();
+                    System.out.println("Masukkan jarak antar gedung baru : ");
+                    int jarakBaru = sc.nextInt();
+                    gedung.updateJarak(asal, tujuan, jarakBaru);
+                    break;
+                case 7:
+                    gedung.hitungEdge();
+                    break;
+                case 8:
+                    System.out.println("Terimakasih telah menggunakan program ini.");
                     sc.close();
                     return;
                 default:
